@@ -2,3 +2,12 @@ nbproject/
 assets/
 protected/runtime/
 protected/data/
+
+# These files should be generated with the framework lib command
+index-test.php
+index.php
+protected/tests/bootstrap.php
+protected/yiic.php
+
+# OS X files
+.DS_Store
