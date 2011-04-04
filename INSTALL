@@ -1,6 +1,19 @@
+# setup web application skeleton
 cd /path/to/p3
 /path/to/yii/framework/yiic webapp .
 
+# install user module database
 protected/yiic migrate \
     --migrationPath=application.modules.user.migrations \
     --migrationTable=tbl_migration_module_user
+
+
+# update config/main.php
+$config = array(
+ [...exisiting config...]
+);
+$config = CMap::mergeArray(
+	$config,
+	require(dirname(__FILE__).DIRECTORY_SEPARATOR.'extensions-enabled'.DIRECTORY_SEPARATOR.'user.php')
+	);
+return $config;
