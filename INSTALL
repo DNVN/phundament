@@ -1,0 +1,6 @@
+cd /path/to/p3
+/path/to/yii/framework/yiic webapp .
+
+protected/yiic migrate \
+    --migrationPath=application.modules.user.migrations \
+    --migrationTable=tbl_migration_module_user
