@@ -5,6 +5,8 @@
 # You need to setup to web application skeleton
 # Use an exisiting yii installation for this task
 # Or download one here: http://www.yiiframework.com/download/
+#
+# Do not overwrite files
 
 cd /path/to/phundament
 /path/to/an/existing/yii/framework/yiic webapp .
