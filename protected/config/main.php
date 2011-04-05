@@ -91,6 +91,10 @@ $config = CMap::mergeArray(
 		$config,
 		require(realpath(dirname(__FILE__) . '/../modules/user/config/main.php'))
 );
+$config = CMap::mergeArray(
+		$config,
+		require(realpath(dirname(__FILE__) . '/../modules/srbac/config/main.php'))
+);
 
 
 #var_dump($config);exit;
