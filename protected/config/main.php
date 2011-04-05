@@ -93,7 +93,7 @@ $config = CMap::mergeArray(
 );
 $config = CMap::mergeArray(
 		$config,
-		require(realpath(dirname(__FILE__) . '/../modules/srbac/config/main.php'))
+		require(realpath(dirname(__FILE__) . '/../modules/rights/config/main.php'))
 );
 
 
