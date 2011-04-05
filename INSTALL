@@ -1,19 +1,17 @@
-# setup web application skeleton
-cd /path/to/p3
-/path/to/yii/framework/yiic webapp .
+--- phundament 3-a1 (alpha, planning) ---
 
-# install user module database
-protected/yiic migrate \
-    --migrationPath=application.modules.user.migrations \
-    --migrationTable=tbl_migration_module_user
+# Setup Application
+#
+# You need to setup to web application skeleton
+# Use an exisiting yii installation for this task
+# Or download one here: http://www.yiiframework.com/download/
+
+cd /path/to/phundament
+/path/to/an/existing/yii/framework/yiic webapp .
 
 
-# update config/main.php
-$config = array(
- [...exisiting config...]
-);
-$config = CMap::mergeArray(
-	$config,
-	require(dirname(__FILE__).DIRECTORY_SEPARATOR.'extensions-enabled'.DIRECTORY_SEPARATOR.'user.php')
-	);
-return $config;
+# Setup Modules (Database)
+
+Go to http://localhost/phundament/index.php?r=p3admin
+
+Click on the modules on the right and perform migrations.
