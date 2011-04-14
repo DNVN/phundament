@@ -20,10 +20,11 @@ class DumpSchemaCommand extends CConsoleCommand
             $data = Yii::app()->db->createCommand()
                 ->from($def->name)
                 ->query();
-            foreach ($data AS $row) {
+
+			foreach ($data AS $row) {
                 $result .= '$this->insert("' . $def->name . '", array(' . "\n";
                 foreach($row AS $column => $value) {
-                    $result .= '    "' . $column . '"=>"' .  $value . '",' . "\n";            
+                    $result .= '    "' . $column . '"=>' .  (($value===null)?'null':'"'.$value.'"') . ',' . "\n";
                 }
                 $result .= ') );' . "\n\n";
             }
@@ -32,11 +33,16 @@ class DumpSchemaCommand extends CConsoleCommand
     }
  
     public function getColType($col) {
-        if ($col->isPrimaryKey) {
+        if ($col->isPrimaryKey && $col->autoIncrement) {
             return "pk";
         }
-        $result = $col->dbType;
-        if (!$col->allowNull) {
+
+		$result = $col->dbType;
+
+        if ($col->isPrimaryKey) {
+            #$result .= ' PRIMARY';
+        }
+		if (!$col->allowNull) {
             $result .= ' NOT NULL';
         }
         if ($col->defaultValue != null) {
