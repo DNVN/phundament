@@ -15,7 +15,8 @@ return array(
 	),
 	'modules' => array(
 		'rights' => array(
-			#'install' => true, // Enables the installer.
+			'install' => true, // Enables the installer.
+			#'superuserName' => 'admin'
 		),
 	),
 )
