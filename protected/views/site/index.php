@@ -1,4 +1,4 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
+<?php $this->pageTitle = Yii::app()->name; ?>
 
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
@@ -11,9 +11,21 @@
 </ul>
 
 <p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+	the <a href="http://www.yiiframework.com/doc/">documentation</a>.
+	Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
+	should you have any questions.</p>
 
-
-<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id'=>'main')) ?>
+<div class="span-22 last">
+	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main')) ?>
+</div>
+<div style="height: 20px; clear: both;"></div>
+<div class="span-11">
+	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main2')) ?>
+</div>
+<div class="span-11 last">
+	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main3')) ?>
+</div>
+<div style="height: 20px; clear: both;"></div>
+<div class="span-16">
+	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main4')) ?>
+</div>
