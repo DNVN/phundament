@@ -15,6 +15,8 @@ return array(
 	),
 	'modules' => array(
 		'rights' => array(
+			'userIdColumn'=>'id',
+			'userClass' => 'User',
 			#'install' => true, // Enables the installer.
 			#'superuserName' => 'admin'
 		),
