@@ -71,6 +71,9 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		throw new CException('Default WebApp Skeleton login disabled!');
+
+		/*
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -89,7 +92,7 @@ class SiteController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
-		$this->render('login',array('model'=>$model));
+		$this->render('login',array('model'=>$model));*/
 	}
 
 	/**
