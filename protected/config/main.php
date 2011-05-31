@@ -13,6 +13,7 @@ $config = array(
 	'import' => array(
 		'application.models.*',
 		'application.components.*',
+		'zii.widgets.*',
 	),
 	'modules' => array(
 	// uncomment the following to enable the Gii tool
@@ -61,7 +62,7 @@ $config = array(
 			'routes' => array(
 				array(
 					'class' => 'CFileLogRoute',
-					'levels' => 'error, warning',
+					#'levels' => 'error, warning',
 				),
 			// uncomment the following to show log messages on web pages
 			/*

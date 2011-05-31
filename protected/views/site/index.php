@@ -16,7 +16,7 @@
 	should you have any questions.</p>
 
 <div class="span-22 last">
-	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main')) ?>
+	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main1')) ?>
 </div>
 <div style="height: 20px; clear: both;"></div>
 <div class="span-11">
