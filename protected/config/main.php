@@ -40,18 +40,18 @@ $config = array(
 		  ),
 		  ),*/
 
-		'db' => array(
+		/*'db' => array(
 			'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-		),
+		),*/
 // uncomment the following to use a MySQL database
 
-		/*'db' => array(
+		'db' => array(
 			'connectionString' => 'mysql:host=localhost;dbname=p3',
 			'emulatePrepare' => true,
 			'username' => 'test',
 			'password' => 'test',
 			'charset' => 'utf8',
-		),*/
+		),
 
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
@@ -91,14 +91,22 @@ $config = CMap::mergeArray(
 		$config,
 		require(realpath(dirname(__FILE__) . '/../modules/p3widgets/config/main.php'))
 );
-$config = CMap::mergeArray(
+/*$config = CMap::mergeArray(
 		$config,
 		require(realpath(dirname(__FILE__) . '/../modules/user/config/main.php'))
 );
-$config = CMap::mergeArray(
+ */
+
+
+/*$config = CMap::mergeArray(
 		$config,
 		require(realpath(dirname(__FILE__) . '/../modules/rights/config/main.php'))
-);
+);*/
+
+/*$config = CMap::mergeArray(
+		$config,
+		require(realpath(dirname(__FILE__) . '/../modules/cms/config/main.php'))
+);*/
 
 
 #var_dump($config);exit;
