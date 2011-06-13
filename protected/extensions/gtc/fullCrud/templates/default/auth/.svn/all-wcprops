@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/130/trunk/gtc/fullCrud/templates/default/auth
+END
+auth_filter_default.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/130/trunk/gtc/fullCrud/templates/default/auth/auth_filter_default.php
+END
+auth_yum.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/130/trunk/gtc/fullCrud/templates/default/auth/auth_yum.php
+END
+auth_filter_strict.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/108/trunk/gtc/fullCrud/templates/default/auth/auth_filter_strict.php
+END
+auth_none.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/82/trunk/gtc/fullCrud/templates/default/auth/auth_none.php
+END

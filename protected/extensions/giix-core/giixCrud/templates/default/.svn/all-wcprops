@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/106/trunk/giix-core/giixCrud/templates/default
+END
+_view.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/34/trunk/giix-core/giixCrud/templates/default/_view.php
+END
+view.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/35/trunk/giix-core/giixCrud/templates/default/view.php
+END
+update.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/35/trunk/giix-core/giixCrud/templates/default/update.php
+END
+_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/90/trunk/giix-core/giixCrud/templates/default/_form.php
+END
+create.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/31/trunk/giix-core/giixCrud/templates/default/create.php
+END
+controller.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/106/trunk/giix-core/giixCrud/templates/default/controller.php
+END
+_search.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/giix-core/giixCrud/templates/default/_search.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/31/trunk/giix-core/giixCrud/templates/default/index.php
+END
+admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/34/trunk/giix-core/giixCrud/templates/default/admin.php
+END

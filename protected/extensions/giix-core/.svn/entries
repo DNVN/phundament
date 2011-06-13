@@ -1,0 +1,43 @@
+10
+
+dir
+116
+http://giix.googlecode.com/svn/trunk/giix-core
+http://giix.googlecode.com/svn
+
+
+
+2011-06-02T14:31:21.255889Z
+111
+rodrigo.coelho@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f41ef23b-66d8-86e7-7931-d4dca6908580
+
+vendors
+dir
+
+giixModel
+dir
+
+helpers
+dir
+
+messsages
+dir
+
+giixCrud
+dir
+
