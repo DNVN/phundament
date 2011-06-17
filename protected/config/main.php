@@ -4,7 +4,7 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-$config = array(
+return array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'My Web Application',
 	// preloading 'log' component
@@ -16,13 +16,17 @@ $config = array(
 		'zii.widgets.*',
 	),
 	'modules' => array(
-	// uncomment the following to enable the Gii tool
-	  'gii'=>array(
-	  'class'=>'system.gii.GiiModule',
-	  'password'=>'p3',
-	  // If removed, Gii defaults to localhost only. Edit carefully to taste.
-	  'ipFilters'=>array('127.0.0.1','::1'),
-	  ),
+		// uncomment the following to enable the Gii tool
+		'gii' => array(
+			'class' => 'system.gii.GiiModule',
+			'password' => 'p3',
+			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters' => array('127.0.0.1', '::1'),
+			'generatorPaths' => array(
+				'ext.giix-core', // giix generators
+				'ext.gtc', // giix generators
+			),
+		),
 	),
 	// application components
 	'components' => array(
@@ -31,18 +35,18 @@ $config = array(
 			'allowAutoLogin' => true,
 		),
 		// uncomment the following to enable URLs in path-format
-		 /* 'urlManager'=>array(
+		/* 'urlManager'=>array(
 		  'urlFormat'=>'path',
 		  'rules'=>array(
 		  '<controller:\w+>/<id:\d+>'=>'<controller>/view',
 		  '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 		  '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 		  ),
-		  ),*/
+		  ), */
 
-		/*'db' => array(
-			'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-		),*/
+		/* 'db' => array(
+		  'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
+		  ), */
 // uncomment the following to use a MySQL database
 
 		'db' => array(
@@ -52,7 +56,6 @@ $config = array(
 			'password' => 'test',
 			'charset' => 'utf8',
 		),
-
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
 			'errorAction' => 'site/error',
@@ -80,35 +83,3 @@ $config = array(
 		'adminEmail' => 'webmaster@example.com',
 	),
 );
-
-/* Include default module configs */
-
-$config = CMap::mergeArray(
-		$config,
-		require(realpath(dirname(__FILE__) . '/../modules/p3admin/config/main.php'))
-);
-$config = CMap::mergeArray(
-		$config,
-		require(realpath(dirname(__FILE__) . '/../modules/p3widgets/config/main.php'))
-);
-/*$config = CMap::mergeArray(
-		$config,
-		require(realpath(dirname(__FILE__) . '/../modules/user/config/main.php'))
-);
- */
-
-
-/*$config = CMap::mergeArray(
-		$config,
-		require(realpath(dirname(__FILE__) . '/../modules/rights/config/main.php'))
-);*/
-
-/*$config = CMap::mergeArray(
-		$config,
-		require(realpath(dirname(__FILE__) . '/../modules/cms/config/main.php'))
-);*/
-
-
-#var_dump($config);exit;
-
-return $config;
