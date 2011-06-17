@@ -14,6 +14,9 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
+
+		'ext.gtc.components.*', // gtc
+		'application.modules.user.components.*' // Hack: gtc fix
 	),
 	'modules' => array(
 		// uncomment the following to enable the Gii tool
@@ -44,18 +47,18 @@ return array(
 		  ),
 		  ), */
 
-		/* 'db' => array(
+		 'db' => array(
 		  'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-		  ), */
-// uncomment the following to use a MySQL database
+		  ), 
+		// uncomment the following to use a MySQL database
 
-		'db' => array(
+		/*'db' => array(
 			'connectionString' => 'mysql:host=localhost;dbname=p3',
 			'emulatePrepare' => true,
 			'username' => 'test',
 			'password' => 'test',
 			'charset' => 'utf8',
-		),
+		),*/
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
 			'errorAction' => 'site/error',
