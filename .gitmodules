@@ -1,0 +1,4 @@
+[submodule "gtc"]
+        path = /protected/extensions/gtc
+        url = git@github.com:schmunk42/gii-template-collection.git
+        
