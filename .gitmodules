@@ -1,4 +1,3 @@
-[submodule "gtc"]
-        path = /protected/extensions/gtc
-        url = git@github.com:schmunk42/gii-template-collection.git
-        
+[submodule "protected/extensions/gtc"]
+	path = protected/extensions/gtc
+	url = git@github.com:schmunk42/gii-template-collection.git
