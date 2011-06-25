@@ -4,3 +4,6 @@
 [submodule "protected/extensions/yiiext"]
 	path = protected/extensions/yiiext
 	url = git@github.com:schmunk42/yiiext.git
+[submodule "protected/modules/p3admin"]
+	path = protected/modules/p3admin
+	url = git@github.com:schmunk42/p3admin.git
