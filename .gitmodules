@@ -10,3 +10,9 @@
 [submodule "protected/modules/p3widgets"]
 	path = protected/modules/p3widgets
 	url = git@github.com:schmunk42/p3widgets.git
+[submodule "protected/modules/rights"]
+	path = protected/modules/rights
+	url = git@github.com:schmunk42/yii-rights.git
+[submodule "protected/modules/user"]
+	path = protected/modules/user
+	url = git@github.com:schmunk42/yii-user.git
