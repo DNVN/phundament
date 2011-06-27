@@ -7,3 +7,6 @@
 [submodule "protected/modules/p3admin"]
 	path = protected/modules/p3admin
 	url = git@github.com:schmunk42/p3admin.git
+[submodule "protected/modules/p3widgets"]
+	path = protected/modules/p3widgets
+	url = git@github.com:schmunk42/p3widgets.git
