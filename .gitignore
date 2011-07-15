@@ -5,7 +5,7 @@
 
 # These files should be generated with the framework lib command
 /index-test.php
-#/index.php
+/index.php
 /protected/tests/bootstrap.php
 /protected/yiic.php
 
