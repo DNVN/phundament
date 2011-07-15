@@ -11,10 +11,13 @@ class P3Configuration {
 
 	private function scan(){
 		foreach($this->scanDirectories AS $dir){
-			$config = require($dir);
-			$this->_config = CMap::mergeArray($this->_config, $config);
+            if (is_array($dir)) {
+    			$config = $dir;
+            } else {
+    			$config = require($dir);
+	        }
+	        $this->_config = CMap::mergeArray($this->_config, $config);
 		}
-
 	}
 	
 	function toArray() {

@@ -4,7 +4,7 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-return array(
+$mainConfig = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'My Web Application',
 	// preloading 'log' component
@@ -88,3 +88,17 @@ return array(
 		'adminEmail' => 'webmaster@example.com',
 	),
 );
+
+
+
+require(dirname(__FILE__).'/../components/P3Configuration.php');
+$config = new P3Configuration(array(
+	$mainConfig,
+	dirname(__FILE__).'/../modules/p3admin/config/main.php',
+	dirname(__FILE__).'/../modules/p3widgets/config/main.php',
+	dirname(__FILE__).'/../modules/p3media/config/main.php',
+	dirname(__FILE__).'/../modules/p3admin/modules-install/user/config/main.php',
+	dirname(__FILE__).'/../modules/p3admin/modules-install/rights/config/main.php',
+));
+
+return $config->toArray();
