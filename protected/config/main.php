@@ -91,7 +91,7 @@ $mainConfig = array(
 
 
 
-require(dirname(__FILE__).'/../components/P3Configuration.php');
+require(dirname(__FILE__).'/../extensions/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
 	$mainConfig,
 	dirname(__FILE__).'/../modules/p3admin/config/main.php',
