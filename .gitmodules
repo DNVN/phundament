@@ -19,3 +19,6 @@
 [submodule "protected/modules/p3media"]
 	path = protected/modules/p3media
 	url = git@github.com:schmunk42/p3media.git
+[submodule "protected/extensions/p3extensions"]
+	path = protected/extensions/p3extensions
+	url = git@github.com:schmunk42/p3extensions.git
