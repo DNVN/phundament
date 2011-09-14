@@ -1,21 +1,26 @@
-[submodule "protected/extensions/gtc"]
-	path = protected/extensions/gtc
-	url = git@github.com:schmunk42/gii-template-collection.git
-[submodule "protected/extensions/yiiext"]
-	path = protected/extensions/yiiext
-	url = git@github.com:schmunk42/yiiext.git
+[submodule "protected/extensions/p3extensions"]
+	path = protected/extensions/p3extensions
+	url = git@github.com:schmunk42/p3extensions.git
 [submodule "protected/modules/p3admin"]
 	path = protected/modules/p3admin
 	url = git@github.com:schmunk42/p3admin.git
 [submodule "protected/modules/p3widgets"]
 	path = protected/modules/p3widgets
 	url = git@github.com:schmunk42/p3widgets.git
+[submodule "protected/modules/p3media"]
+	path = protected/modules/p3media
+	url = git@github.com:schmunk42/p3media.git
+
 [submodule "protected/modules/rights"]
 	path = protected/modules/rights
 	url = git@github.com:schmunk42/yii-rights.git
 [submodule "protected/modules/user"]
 	path = protected/modules/user
 	url = git@github.com:schmunk42/yii-user.git
-[submodule "protected/modules/p3media"]
-	path = protected/modules/p3media
-	url = git@github.com:schmunk42/p3media.git
+
+[submodule "protected/extensions/gtc"]
+	path = protected/extensions/gtc
+	url = git@github.com:schmunk42/gii-template-collection.git
+[submodule "protected/extensions/yiiext"]
+	path = protected/extensions/yiiext
+	url = git@github.com:schmunk42/yiiext.git
