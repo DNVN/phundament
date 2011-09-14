@@ -47,18 +47,18 @@ $mainConfig = array(
 		  ),
 		  ), */
 
-		 'db' => array(
+		/* 'db' => array(
 		  'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-		  ), 
+		  ), */
 		// uncomment the following to use a MySQL database
 
-		/*'db' => array(
+		'db' => array(
 			'connectionString' => 'mysql:host=localhost;dbname=p3',
 			'emulatePrepare' => true,
 			'username' => 'test',
 			'password' => 'test',
 			'charset' => 'utf8',
-		),*/
+		),
 		
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
@@ -91,7 +91,7 @@ $mainConfig = array(
 
 
 
-require(dirname(__FILE__).'/../components/P3Configuration.php');
+require_once(dirname(__FILE__).'/../extensions/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
 	$mainConfig,
 	dirname(__FILE__).'/../modules/p3admin/config/main.php',

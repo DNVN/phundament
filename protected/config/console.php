@@ -11,4 +11,5 @@ return array(
 	'components'=>array(
 		'db'=>$mainConfig['components']['db']
 	),
+#	'import' => $mainConfig['import']
 );

@@ -123,7 +123,7 @@ div.flash-success a
 	color:#264409;
 }
 
-/* re-added blueprint defaults */
+/* re-added blueprint defaults
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
 .error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
 .notice {background:#fff6bf;color:#514721;border-color:#ffd324;}
@@ -133,7 +133,7 @@ div.flash-success a
 .notice a {color:#514721;}
 .success a {color:#264409;}
 .info a {color:#205791;}
-
+ */
 
 div.form .rememberMe label
 {

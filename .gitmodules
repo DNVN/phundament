@@ -1,3 +1,4 @@
+# Phundament 3
 [submodule "protected/extensions/p3extensions"]
 	path = protected/extensions/p3extensions
 	url = git@github.com:schmunk42/p3extensions.git
@@ -11,6 +12,7 @@
 	path = protected/modules/p3media
 	url = git@github.com:schmunk42/p3media.git
 
+# Core modules
 [submodule "protected/modules/rights"]
 	path = protected/modules/rights
 	url = git@github.com:schmunk42/yii-rights.git
@@ -18,6 +20,7 @@
 	path = protected/modules/user
 	url = git@github.com:schmunk42/yii-user.git
 
+# Extensions
 [submodule "protected/extensions/gtc"]
 	path = protected/extensions/gtc
 	url = git@github.com:schmunk42/gii-template-collection.git
