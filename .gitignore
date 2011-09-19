@@ -9,5 +9,8 @@
 /protected/tests/bootstrap.php
 /protected/yiic.php
 
+# server-specific files
+*/config/local.php
+
 # OS X files
 .DS_Store
