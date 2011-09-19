@@ -94,11 +94,13 @@ $mainConfig = array(
 require_once(dirname(__FILE__).'/../extensions/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
 	$mainConfig,
+	dirname(__FILE__).'/local.php',
 	dirname(__FILE__).'/../modules/p3admin/config/main.php',
 	dirname(__FILE__).'/../modules/p3widgets/config/main.php',
 	dirname(__FILE__).'/../modules/p3media/config/main.php',
 	dirname(__FILE__).'/../modules/p3admin/modules-install/user/config/main.php',
 	dirname(__FILE__).'/../modules/p3admin/modules-install/rights/config/main.php',
+	dirname(__FILE__).'/../extensions/p3extensions/widgets/ckeditor/config/main.php',
 ));
 
 return $config->toArray();
