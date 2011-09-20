@@ -239,3 +239,11 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+
+
+
+IMG.ckeditor {
+    max-height: 100px;
+    max-width: 200px;
+}
