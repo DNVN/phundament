@@ -11,5 +11,17 @@ return array(
 	'components'=>array(
 		'db'=>$mainConfig['components']['db']
 	),
+    'commandMap' => array(
+        'rsync'=>array(
+            'class' => 'ext.p3extensions.commands.P3RsyncCommand',
+            'servers' => array(
+                'dev' => realpath(dirname(__FILE__).'/..'),
+                'prod' => 'user@example.com:/path/to/webapp',
+            ),
+            'aliases' => array(
+                'data' => 'application.data'
+            ),
+        ),
+    ),
 #	'import' => $mainConfig['import']
 );
