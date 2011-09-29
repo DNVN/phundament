@@ -6,7 +6,7 @@
 // CWebApplication properties can be configured here.
 $mainConfig = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-	'name' => 'My Web Application',
+	'name' => 'My Phundament 3',
 	// preloading 'log' component
 	'preload' => array('log'),
 	// autoloading model and component classes
@@ -38,14 +38,16 @@ $mainConfig = array(
 			'allowAutoLogin' => true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/* 'urlManager'=>array(
-		  'urlFormat'=>'path',
-		  'rules'=>array(
-		  '<controller:\w+>/<id:\d+>'=>'<controller>/view',
-		  '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-		  '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-		  ),
-		  ), */
+		 'urlManager'=>array(
+		  'showScriptName'=> false,
+		  'appendParams' => false, // in general more error resistant
+	      'urlFormat'=>'path',
+			  'rules'=>array(
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+			  ),
+		  ), 
 
 		/* 'db' => array(
 		  'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
