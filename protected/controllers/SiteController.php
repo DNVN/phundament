@@ -101,6 +101,10 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
+
+		Yii::app()->session->open();
+		EUserFlash::setNoticeMessage('User logged out.','login');
+		
 		$this->redirect(Yii::app()->homeUrl);
 	}
 }

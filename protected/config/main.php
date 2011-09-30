@@ -7,6 +7,7 @@
 $mainConfig = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'My Phundament 3',
+	'theme' => 'classic',
 	// preloading 'log' component
 	'preload' => array('log'),
 	// autoloading model and component classes
@@ -16,7 +17,9 @@ $mainConfig = array(
 		'zii.widgets.*',
 
 		'ext.gtc.components.*', // gtc
-		'application.modules.user.components.*' // Hack: gtc fix
+		'application.modules.user.components.*', // Hack: gtc fix
+		
+		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
 	'modules' => array(
 		// uncomment the following to enable the Gii tool
@@ -30,6 +33,12 @@ $mainConfig = array(
 				'ext.gtc', // giix generators
 			),
 		),
+		'p3admin' => array(
+			'params' => array('install' => false),			
+		),
+		'rights' => array(
+			'cssFile' => '/css/rights/default.css'
+		)
 	),
 	// application components
 	'components' => array(
@@ -43,6 +52,7 @@ $mainConfig = array(
 		  'appendParams' => false, // in general more error resistant
 	      'urlFormat'=>'path',
 			  'rules'=>array(
+				'admin'=>'p3admin',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -82,7 +92,13 @@ $mainConfig = array(
 			 */
 			),
 		),
+		
+		'widgetFactory' => array(
+            'class' => 'CWidgetFactory',
+			'enableSkin'=>true,
 
+        ),
+		
 		'image' => array(
 			 'class'=>'ext.p3extensions.components.image.CImageComponent',
             // GD or ImageMagick
@@ -103,14 +119,14 @@ $mainConfig = array(
 
 require_once(dirname(__FILE__).'/../extensions/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
-	$mainConfig,
-	dirname(__FILE__).'/local.php',
 	dirname(__FILE__).'/../modules/p3admin/config/main.php',
 	dirname(__FILE__).'/../modules/p3widgets/config/main.php',
 	dirname(__FILE__).'/../modules/p3media/config/main.php',
 	dirname(__FILE__).'/../modules/p3admin/modules-install/user/config/main.php',
 	dirname(__FILE__).'/../modules/p3admin/modules-install/rights/config/main.php',
 	dirname(__FILE__).'/../extensions/p3extensions/widgets/ckeditor/config/main.php',
+	$mainConfig,
+	dirname(__FILE__).'/local.php',
 ));
 
 return $config->toArray();

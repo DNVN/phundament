@@ -19,16 +19,18 @@
 
 <body>
 
+<?php $this->widget('ext.p3extensions.widgets.userflash.EUserFlash'); ?>
+	
 <div class="container" id="page">
-
+	
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		<div id="metamenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>ucfirst(Yii::app()->user->name)),
-				array('label'=>'Profile', 'url'=>array('/user'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Administration', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Profile', 'url'=>array('/user/profile'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Administration', 'url'=>array('/admin'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
 				array('label'=>'Login', 'url'=>Yii::app()->user->loginUrl, 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 			),

@@ -1,3 +1,6 @@
+html, body {
+    height: 101%; /* force scrollbars */
+}
 body
 {
     margin: 0;
@@ -110,14 +113,14 @@ body
     text-decoration:none;
 }
 
-div.flash-error, div.flash-notice, div.flash-success
+div.flash-error, div.flash-notice, div.flash-success, div.flash-warning
 {
     padding:.8em;
     margin-bottom:1em;
     border:2px solid #ddd;
 }
 
-div.flash-error
+div.flash-error, div.flash-warning
 {
     background:#FBE3E4;
     color:#8a1f11;
@@ -138,7 +141,7 @@ div.flash-success
     border-color:#C6D880;
 }
 
-div.flash-error a
+div.flash-error a, div.flash-warning a
 {
     color:#8a1f11;
 }
@@ -203,8 +206,8 @@ div.search-form
 .portlet-decoration
 {
     padding: 3px 8px;
-    background: #B7D6E7;
-    border-left: 5px solid #6FACCF;
+    background: #ccc;
+    border-left: 5px solid #666;
 }
 
 .portlet-title
@@ -213,7 +216,7 @@ div.search-form
     font-weight: bold;
     padding: 0;
     margin: 0;
-    color: #298dcd;
+    color: #333;
 }
 
 .portlet-content
@@ -221,7 +224,7 @@ div.search-form
     font-size:0.9em;
     margin: 0 0 15px 0;
     padding: 5px 8px;
-    background:#EFFDFF;
+    background:#eee;
 }
 
 .portlet-content ul
@@ -253,7 +256,7 @@ div.search-form
 .operations li a
 {
     font: bold 12px Arial;
-    color: #0066A4;
+    color: #666;
     display: block;
     padding: 2px 0 2px 8px;
     line-height: 15px;
@@ -262,12 +265,13 @@ div.search-form
 
 .operations li a:visited
 {
-    color: #0066A4;
+    color: #333;
 }
 
 .operations li a:hover
 {
-    background: #80CFFF;
+    background: #666;
+    color: #fff;
 }
 
 
