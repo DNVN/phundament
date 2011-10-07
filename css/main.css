@@ -281,3 +281,9 @@ IMG.ckeditor {
     max-height: 100px;
     max-width: 200px;
 }
+
+
+
+DIV.form DIV.relation label {
+    display: inline;
+}

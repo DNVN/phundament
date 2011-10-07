@@ -29,7 +29,7 @@ $mainConfig = array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters' => array('127.0.0.1', '::1'),
 			'generatorPaths' => array(
-				'ext.giix-core', // giix generators
+				#'ext.giix-core', // giix generators
 				'ext.gtc', // giix generators
 			),
 		),
@@ -38,7 +38,7 @@ $mainConfig = array(
 		),
 		'rights' => array(
 			'cssFile' => '/css/rights/default.css'
-		)
+		),
 	),
 	// application components
 	'components' => array(
@@ -65,6 +65,7 @@ $mainConfig = array(
 		// uncomment the following to use a MySQL database
 
 		'db' => array(
+			#'connectionString' => 'mysql:host=localhost;dbname=p3',
 			'connectionString' => 'mysql:host=localhost;dbname=p3',
 			'emulatePrepare' => true,
 			'username' => 'test',
