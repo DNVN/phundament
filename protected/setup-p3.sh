@@ -4,16 +4,21 @@
 #
 # Since bash script is pretty cool and we haven't coded the PHP installer yet
 
+
 baseDir=`dirname $0`
-pushd $baseDir
+pushd $baseDir  > /dev/null
 
 echo "Phundament 3 Setup"
 echo ""
 
 if [ $1 != "" ]; then
-    echo "Note: Skip '...overwrite?' by hitting <enter>";
-        extYiicDir=`dirname $1`
-        $extYiicDir/yiic webapp ..
+    echo "Note: Skip '...overwrite?' by hitting <enter>";        
+    echo ""    
+    pushd .. > /dev/null
+    appDir="`pwd`"
+    popd  > /dev/null
+    extYiicDir=`dirname $1`
+    $extYiicDir/yiic webapp $appDir
 else
     echo "External yiic command not specified, skipping webapp stage.";
 fi
@@ -40,3 +45,5 @@ if [ $choice == "y" ]; then
 else 
 	echo "Skipped."
 fi
+
+popd
