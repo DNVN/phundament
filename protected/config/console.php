@@ -22,6 +22,9 @@ return array(
                 'data' => 'application.data'
             ),
         ),
+        'dumpschema'=>array(
+            'class' => 'ext.p3extensions.commands.P3DumpSchemaCommand',
+		),
     ),
 #	'import' => $mainConfig['import']
 );
