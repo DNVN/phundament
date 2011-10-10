@@ -2,6 +2,7 @@
 /assets/
 /protected/runtime/
 /protected/data/
+/runtime/
 
 # These files should be generated with the framework lib command
 /index-test.php
@@ -14,3 +15,6 @@
 
 # OS X files
 .DS_Store
+
+# Testing
+/protected/modules/fullcrud/
