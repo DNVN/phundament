@@ -1,3 +1,6 @@
+README
+======
+
 git clone git@github.com:schmunk42/phundament.git
 cd phundament.git
 git submodule init *
