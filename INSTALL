@@ -24,6 +24,9 @@ You may download a copy of Yii here: http://www.yiiframework.com/download/
 
 $ phundament/protected/setup-p3.sh "/path/to/yiic/command"
 
+We'll use the existing yiic command to create the webapp skeleton.
+Note: This installation is therefore used by your Phundament 3 app.
+
 
 #### Database Setup 
 

@@ -18,6 +18,7 @@ if [ $1 != "" ]; then
     appDir="`pwd`"
     popd  > /dev/null
     extYiicDir=`dirname $1`
+    echo "$extYiicDir/yiic webapp $appDir"
     $extYiicDir/yiic webapp $appDir
 else
     echo "External yiic command not specified, skipping webapp stage.";

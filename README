@@ -1,3 +1,40 @@
+git clone git@github.com:schmunk42/phundament.git
+cd phundament.git
+git submodule init *
+git submodule update *
+
+cd protected/extensions/p3extensions
+git submodule init *
+git submodule update *
+
+
+../path/to/yii-1.1.8/framework/yiic webapp .
+# skip overwrting files by hitting enter
+
+edit config/main.php (Db.Connection)
+
+Open index.php
+CDbException
+The table "p3_widget" for active record class "Widget" cannot be found in the database. 
+
+A)
+open admin backend
+index.php?r=p3admin
+click on "Manage" and apply all migrations
+
+B)
+execute shell commands (one by one)
+./yiic migrate --migrationPath=application.modules.p3admin.modules-install.user.migrations --migrationTable=tbl_migration_module_user
+./yiic migrate --migrationPath=application.modules.p3admin.modules-install.rights.migrations --migrationTable=tbl_migration_module_rights
+./yiic migrate --migrationPath=application.modules.p3widgets.migrations --migrationTable=tbl_migration_module_p3widgets
+./yiic migrate --migrationPath=application.modules.p3media.migrations --migrationTable=tbl_migration_module_p3media
+
+
+
+
+
+
+
 [ NOTICE ]
 
 We're currently in planning stage, please join our discussion here: http://www.yiiframework.com/forum/index.php?/topic/17591-planning-yii-cms-a-different-approach/
