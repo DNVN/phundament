@@ -15,10 +15,9 @@ $mainConfig = array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
-
 		'ext.gtc.components.*', // gtc
 		'application.modules.user.components.*', // Hack: gtc fix
-		
+
 		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
 	'modules' => array(
@@ -34,7 +33,7 @@ $mainConfig = array(
 			),
 		),
 		'p3admin' => array(
-			'params' => array('install' => true),			
+			'params' => array('install' => true),
 		),
 		'rights' => array(
 			'cssFile' => '/css/rights/default.css'
@@ -47,37 +46,31 @@ $mainConfig = array(
 			'allowAutoLogin' => true,
 		),
 		// uncomment the following to enable URLs in path-format
-		 'urlManager'=>array(
-		  'showScriptName'=> false,
-		  'appendParams' => false, // in general more error resistant
-	      'urlFormat'=>'path',
-			  'rules'=>array(
-				'admin'=>'p3admin',
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			  ),
-		  ), 
-
-		/* 'db' => array(
-		  'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-		  ), */
-		// uncomment the following to use a MySQL database
-
+		'urlManager' => array(
+			'showScriptName' => false,
+			'appendParams' => false, // in general more error resistant
+			'urlFormat' => 'path',
+			'rules' => array(
+				'admin' => 'p3admin',
+				'<controller:\w+>/<id:\d+>' => '<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+			),
+		),
 		'db' => array(
-			#'connectionString' => 'mysql:host=localhost;dbname=p3',
+			// SQLite
+			#'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
+			// MySQL
 			'connectionString' => 'mysql:host=localhost;dbname=p3',
 			'emulatePrepare' => true,
 			'username' => 'test',
 			'password' => 'test',
 			'charset' => 'utf8',
 		),
-		
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
 			'errorAction' => 'site/error',
 		),
-		
 		'log' => array(
 			'class' => 'CLogRouter',
 			'routes' => array(
@@ -93,20 +86,16 @@ $mainConfig = array(
 			 */
 			),
 		),
-		
 		'widgetFactory' => array(
-            'class' => 'CWidgetFactory',
-			'enableSkin'=>true,
-
-        ),
-		
-		'image' => array(
-			 'class'=>'ext.p3extensions.components.image.CImageComponent',
-            // GD or ImageMagick
-            'driver'=>'ImageMagick',
-			'params'=>array('directory'=>'/opt/local/bin'),
+			'class' => 'CWidgetFactory',
+			'enableSkin' => true,
 		),
-		
+		'image' => array(
+			'class' => 'ext.p3extensions.components.image.CImageComponent',
+			// GD or ImageMagick
+			'driver' => 'ImageMagick',
+			'params' => array('directory' => '/opt/local/bin'),
+		),
 	),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
@@ -118,16 +107,16 @@ $mainConfig = array(
 
 
 
-require_once(dirname(__FILE__).'/../extensions/p3extensions/components/P3Configuration.php');
+require_once(dirname(__FILE__) . '/../extensions/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
-	dirname(__FILE__).'/../modules/p3admin/config/main.php',
-	dirname(__FILE__).'/../modules/p3widgets/config/main.php',
-	dirname(__FILE__).'/../modules/p3media/config/main.php',
-	dirname(__FILE__).'/../modules/p3admin/modules-install/user/config/main.php',
-	dirname(__FILE__).'/../modules/p3admin/modules-install/rights/config/main.php',
-	dirname(__FILE__).'/../extensions/p3extensions/widgets/ckeditor/config/main.php',
-	$mainConfig,
-	dirname(__FILE__).'/local.php',
-));
+		dirname(__FILE__) . '/../modules/p3admin/config/main.php',
+		dirname(__FILE__) . '/../modules/p3widgets/config/main.php',
+		dirname(__FILE__) . '/../modules/p3media/config/main.php',
+		dirname(__FILE__) . '/../modules/p3admin/modules-install/user/config/main.php',
+		dirname(__FILE__) . '/../modules/p3admin/modules-install/rights/config/main.php',
+		dirname(__FILE__) . '/../extensions/p3extensions/widgets/ckeditor/config/main.php',
+		$mainConfig,
+		dirname(__FILE__) . '/local.php',
+	));
 
 return $config->toArray();
