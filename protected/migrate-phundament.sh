@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Database setup for Phundament 3
+#
+# Since bash script is pretty cool and we haven't coded the PHP installer yet
+
 baseDir=`dirname $0`
 pushd $baseDir
 
