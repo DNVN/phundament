@@ -102,6 +102,7 @@ Anwser 'y' for yes when asked by running the setup script.
 http://localhost/phundament/index.php
 
 
+
 Troubleshooting
 ---------------
 Installation Guide is for Linux, OS X, UNIX.
@@ -117,7 +118,8 @@ A: Look like you're using a PHP 4 installation on the shell, you may adjust your
 
 Additional Ressources
 ---------------------
- *  [Wiki Pages](https://github.com/schmunk42/phundament/wiki/_pages)
+ *  [Wiki](https://github.com/schmunk42/phundament/wiki/)
+ *  [Quick Start Guide](https://github.com/schmunk42/phundament/wiki/Quick-Start)
  *  [Development Discussion](http://www.yiiframework.com/forum/index.php?/topic/17591-planning-yii-cms-a-different-approach/)
  *  [Phundament Website](http://phundament.com)
  *  [Company Website](http://herzogkommunikation.de)
