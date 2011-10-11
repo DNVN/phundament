@@ -100,7 +100,7 @@ Installation Guide is for Linux, OS X, UNIX.
 A: You can run yiic also directly via PHP ```php5 -f /path/to/yii/framework/yiic.php webapp .```
 
 
-*Q: Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION ...?*  
+*Q: I get this error ```Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION ...```?*  
 A: Look like you're using a PHP 4 installation on the shell, you may adjust your PHP path in *yiic*
 
 
