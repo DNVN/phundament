@@ -52,7 +52,7 @@ Setup Script
 ------------
 
 ```
-./phundament/protected/setup-p3.sh "/path/to/yiic/command"
+./phundament/protected/setup-p3.sh "/absolute/path/to/yiic/command"
 ```
 
 We'll use the existing yiic command to create the webapp skeleton.
