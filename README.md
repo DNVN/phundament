@@ -8,6 +8,13 @@ Requirements
  *  PHP 5.3
  *  Yii 1.1.8
 
+### Tested Systems
+ *  Mac OS X 10.6.8
+ *  Debian 5.0
+
+### License
+ *  BSD
+
 
 Get it!
 -------
