@@ -2,6 +2,12 @@ phundament 3.0-dev
 ==================
 **alpha**
 
+What is phundament?
+-------------------
+ 1.  Phundament is not a CMS
+ 2.  Yii Framework based set of modules
+ 3.  Solid web application foundation
+ 
 
 Requirements
 ------------
