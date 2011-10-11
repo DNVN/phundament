@@ -7,7 +7,7 @@ What is phundament?
  1.  Phundament is not a CMS
  2.  Yii Framework based set of modules
  3.  Solid web application foundation
- 
+See the [features list](https://github.com/schmunk42/phundament/wiki/Features).
 
 Requirements
 ------------
