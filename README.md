@@ -58,10 +58,16 @@ Setup Script
 We'll use the existing yiic command to create the webapp skeleton.
 **Note: This installation is therefore used by your Phundament 3 app.**
 
+
 ### Webapp Setup
 #### Setup Script (recommended)
-Anwser 'y' for yes when asked by running the setup script.
-**Note: Do not overwrite existing files! Skip with 'Enter'.**
+Anwser only the first question 'Create a Web application' with 'y' for yes.
+**Note: Do not overwrite existing files! Skip '...overwrite?' with 'Enter'.**
+
+##### Manual installation
+/path/to/yiic webapp phundament
+
+./phundament/protected/setup-p3.sh 
 
 
 ### Database Schema Setup
