@@ -12,6 +12,10 @@ Requirements
  *  Mac OS X 10.6.8
  *  Debian 5.0
 
+### Supported Databases
+ *  MySQL 5
+ *  SQLite 3
+
 ### License
  *  BSD
 
