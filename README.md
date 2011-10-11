@@ -22,7 +22,7 @@ If you haven't done so already, get a fresh copy of Phundament 3:
 
 ### git clone
 ```
-git clone --recursive https://github.com/schmunk42/phundament.git phundament
+git clone --recursive git://github.com/schmunk42/phundament.git phundament
 ```
 
 #### alternative: github download
