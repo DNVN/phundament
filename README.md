@@ -105,15 +105,15 @@ A: Look like you're using a PHP 4 installation on the shell, you may adjust your
 
 
 
-Development Discussion
-----------------------
-http://www.yiiframework.com/forum/index.php?/topic/17591-planning-yii-cms-a-different-approach/
+Additional Ressources
+---------------------
+ *  [Wiki Pages](https://github.com/schmunk42/phundament/wiki/_pages)
+ *  [Development Discussion](http://www.yiiframework.com/forum/index.php?/topic/17591-planning-yii-cms-a-different-approach/)
+ *  [Phundament Website](http://phundament.com)
+ *  [Company Website](http://herzogkommunikation.de)
 
 
-
-
-Best regards,
-schmunk 
-
--- schmunk@usrbin.de - phundament.com
+Contact
+-------
+schmunk@usrbin.de
 
