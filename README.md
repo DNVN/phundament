@@ -30,14 +30,14 @@ https://github.com/downloads/schmunk42/phundament/3.0b-dev.zip
 
 
 ### Yii Framework
-For running Phunament 3 you need to setup an standard Yii 
-Web-Application skeleton.
 As Yii is currently not bundled with Phundament 3 you have to use an 
 exisiting Yii Framework installation to perform this task.
 
 You may download a copy of Yii here: http://www.yiiframework.com/download/ or 
-via git clone https://github.com/yiiext/yii.git /path/to/yii
-
+via 
+```
+git clone https://github.com/yiiext/yii.git /path/to/yii
+```
 
 Database Setup 
 --------------
@@ -55,20 +55,22 @@ Setup Script
 ./phundament/protected/setup-p3.sh "/absolute/path/to/yiic/command"
 ```
 
-We'll use the existing yiic command to create the webapp skeleton.
+We have to use an existing yiic command to create the webapp skeleton. 
+This command will create *index.php* and *yiic.php* files which include your existing Yii framework code.
+
 **Note: This installation is therefore used by your Phundament 3 app.**
 
 
 ### Webapp Setup
 #### Setup Script (recommended)
-Anwser only the first question 'Create a Web application' with 'y' for yes.
-**Note: Do not overwrite existing files! Skip '...overwrite?' with 'Enter'.**
+**Note: Anwser only the first question 'Create a Web application' with 'y' for yes. 
+Do not overwrite existing files! Skip '...overwrite?' with 'Enter'.**
 
 ##### Manual installation
+```
 /path/to/yiic webapp phundament
-
 ./phundament/protected/setup-p3.sh 
-
+```
 
 ### Database Schema Setup
 #### Setup Script (recommended)
@@ -94,11 +96,12 @@ Troubleshooting
 ---------------
 Installation Guide is for Linux, OS X, UNIX.
 
-Q: Alternative yiic command?
-A: php5 -f ../yii-1.1.7.r3135/framework/yiic.php webapp .
+*Q: I have problems running yiic, is there an alternative?*  
+A: You can run yiic also directly via PHP ```php5 -f /path/to/yii/framework/yiic.php webapp .```
 
-Q: Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION ...?
-A: adjust PHP path in yiic
+
+*Q: Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION ...?*  
+A: Look like you're using a PHP 4 installation on the shell, you may adjust your PHP path in *yiic*
 
 
 
