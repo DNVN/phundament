@@ -27,3 +27,6 @@
 [submodule "protected/extensions/yiiext"]
 	path = protected/extensions/yiiext
 	url = git@github.com:schmunk42/yiiext.git
+[submodule "protected/extensions/Yii-Docs-Generator"]
+	path = protected/extensions/Yii-Docs-Generator
+	url = git@github.com:schmunk42/Yii-Docs-Generator.git

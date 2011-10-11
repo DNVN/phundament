@@ -25,6 +25,9 @@ return array(
         'dumpschema'=>array(
             'class' => 'ext.p3extensions.commands.P3DumpSchemaCommand',
 		),
+        'docs'=>array(
+            'class' => 'ext.Yii-Docs-Generator.commands.DocsCommand',
+		),
     ),
 #	'import' => $mainConfig['import']
 );
