@@ -24,7 +24,8 @@ else
     echo "External yiic command not specified, skipping webapp stage.";
 fi
 
-echo "Apply database migrations? (y/n)"; read choice
+echo "Apply database migrations? (y/n)"; 
+read choice
 if [ $choice == "y" ]; then
 	echo "Applying migrations...";
     ./yiic migrate --migrationPath=application.modules.p3admin.modules-install.user.migrations --migrationTable=tbl_migration_module_user --interactive=0
@@ -35,7 +36,8 @@ else
 	echo "Skipped."
 fi
 
-echo "Setup folder permissions? (y/n)"; read choice
+echo "Setup folder permissions? (y/n)"; 
+read choice
 if [ $choice == "y" ]; then
     mkdir ../runtime
     chmod 777 ../runtime
