@@ -27,16 +27,25 @@ fi
 echo "Export Phundament 3 from '$appDir' to '$exportDir/$packageName'? (y/n)"
 read choice
 if [ $choice == "y" ]; then
-
-rsync -a \
-  --exclude='.git*' --exclude='protected/data' \
-  --exclude='assets'  --exclude='runtime' \
-  --exclude='config/local.php' \
-  --exclude='nbproject' \
-  $appDir/ $exportDir/$packageName
+    echo "Running rsync ..."
+    rsync -a \
+      --exclude='/protected/runtime' \
+      --exclude='.git*' \
+      --exclude='/assets' \
+      --exclude='/runtime' \
+      --exclude='/protected/data' \
+      --exclude='/protected/config/local.php' \
+      --exclude='/nbproject' \
+      --exclude='/index*.php' \
+      --exclude='protected/yiic.php' \
+      --exlcude='.DS_Store' \
+      "$appDir/" "$exportDir/$packageName"
+    echo "$exportDir/$packageName"
 fi;
 
-pushd $exportDir
-tar -czf $packageName.tar.gz $packageName
+pushd $exportDir > /dev/null
+echo "Creating tar.gz ..."
+tar -czf "$packageName.tar.gz" "$packageName"
+echo "$packageName.tar.gz"
 
 echo "Done."
