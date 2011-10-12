@@ -9,11 +9,6 @@ if [ "$1" == "" ]; then
     exit 
 fi
 
-if [ -d $1/p3-export ]; then
-    echo "Error: Export directory exists."
-    exit 
-fi
-
 pushd "$1" > /dev/null
 exportDir=`pwd`
 popd  > /dev/null
@@ -23,6 +18,12 @@ appDir=`pwd`
 revision=`git rev-parse HEAD`
 packageName="phundament3-${revision:0:8}"
 
+if [ -d "$exportDir/$packageName" ]; then
+    echo "Error: Export directory exists."
+    exit 
+fi
+
+
 echo "Export Phundament 3 from '$appDir' to '$exportDir/$packageName'? (y/n)"
 read choice
 if [ $choice == "y" ]; then
@@ -31,10 +32,11 @@ rsync -a \
   --exclude='.git*' --exclude='protected/data' \
   --exclude='assets'  --exclude='runtime' \
   --exclude='config/local.php' \
+  --exclude='nbproject' \
   $appDir/ $exportDir/$packageName
 fi;
 
 pushd $exportDir
-echo "tar -czf $packageName.tar.gz $packageName"
+tar -czf $packageName.tar.gz $packageName
 
 echo "Done."
