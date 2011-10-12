@@ -59,13 +59,13 @@ $mainConfig = array(
 		),
 		'db' => array(
 			// SQLite
-			#'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
+			'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
 			// MySQL
-			'connectionString' => 'mysql:host=localhost;dbname=p3',
-			'emulatePrepare' => true,
-			'username' => 'test',
-			'password' => 'test',
-			'charset' => 'utf8',
+			#'connectionString' => 'mysql:host=localhost;dbname=p3',
+			#'emulatePrepare' => true,
+			#'username' => 'test',
+			#'password' => 'test',
+			#'charset' => 'utf8',
 		),
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
