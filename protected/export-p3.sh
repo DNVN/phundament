@@ -38,7 +38,7 @@ if [ $choice == "y" ]; then
       --exclude='/nbproject' \
       --exclude='/index*.php' \
       --exclude='protected/yiic.php' \
-      --exlcude='.DS_Store' \
+      --exclude='.DS_Store' \
       "$appDir/" "$exportDir/$packageName"
     echo "$exportDir/$packageName"
 fi;
