@@ -93,8 +93,7 @@ $mainConfig = array(
 		'image' => array(
 			'class' => 'ext.p3extensions.components.image.CImageComponent',
 			// GD or ImageMagick
-			'driver' => 'ImageMagick',
-			'params' => array('directory' => '/opt/local/bin'),
+			'driver' => 'GD',
 		),
 	),
 	// application-level parameters that can be accessed
