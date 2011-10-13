@@ -16,7 +16,7 @@ echo "3. it create appropriate folder permissions for P3Media the media manager 
 echo ""
 
 echo "STAGE 1"
-if [ $1 != "" ]; then
+if [ "$1" != "" ]; then
     echo "For providing an out-of-the-box running web application, we had to modify 'config/main','config/console' and 'layouts/main'."
     echo "Note: Skip '...overwrite?' for these files by hitting <enter>"
     echo ""    
@@ -36,10 +36,11 @@ fi
 baseDir=`dirname $0`
 pushd $baseDir  > /dev/null
 
+echo ""
 echo "STAGE 2"
 echo "Apply database migrations? (y/n)"; 
 read choice
-if [ $choice == "y" ]; then
+if [ "$choice" == "y" ]; then
 	echo "Applying migrations...";
     ./yiic migrate --migrationPath=application.modules.p3admin.modules-install.user.migrations --migrationTable=tbl_migration_module_user --interactive=0
     ./yiic migrate --migrationPath=application.modules.p3admin.modules-install.rights.migrations --migrationTable=tbl_migration_module_rights --interactive=0
@@ -49,10 +50,11 @@ else
 	echo "Skipped."
 fi
 
+echo ""
 echo "STAGE 3"
 echo "Setup folder permissions? (y/n)"; 
 read choice
-if [ $choice == "y" ]; then
+if [ "$choice" == "y" ]; then
     mkdir ../runtime
     chmod 777 ../runtime
     mkdir ./data/p3media
@@ -64,3 +66,7 @@ else
 fi
 
 popd
+
+echo ""
+echo "Installation complete."
+echo "Thank you for choosing Phundament 3."
