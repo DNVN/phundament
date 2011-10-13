@@ -1,6 +1,11 @@
-<?php $this->pageTitle = Yii::app()->name; ?>
+<?php
+$this->pageTitle=Yii::app()->name . ' - Widget Demo';
+$this->breadcrumbs=array(
+	'Widgdet Demo',
+);
+?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1>Phundament 3 Widget Demo</i></h1>
 
 <p>Congratulations! You have successfully created your application.</p>
 
