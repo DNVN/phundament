@@ -52,6 +52,7 @@ $mainConfig = array(
 			'urlFormat' => 'path',
 			'rules' => array(
 				'admin' => 'p3admin',
+				'site/login' => 'user/login', // standard login disabled 
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
