@@ -1,22 +1,23 @@
-phundament 3.0-dev
+Phundament 3-0.1
 ==================
 **alpha**
 
-What is phundament?
--------------------
- 1.  Phundament is not a CMS
+What is Phundament 3?
+---------------------
+ 1.  Not a CMS ;)
  2.  Yii Framework based set of modules
  3.  Solid web application foundation
+
 See the [features list](https://github.com/schmunk42/phundament/wiki/Features).
 
 Requirements
 ------------
  *  PHP 5.3
- *  Yii 1.1.8
+ *  [Yii Framework] (http://www.yiiframework.com/) 1.1.8
 
 ### Tested Systems
  *  Mac OS X 10.6.8
- *  Debian 5.0
+ *  Debian 5,6
 
 ### Supported Databases
  *  MySQL 5
@@ -26,94 +27,44 @@ Requirements
  *  BSD
 
 
-Get it!
--------
-If you haven't done so already, get a fresh copy of Phundament 3:
+Quick Start
+-----------
 
-### git clone
+### Download
+#### Phundament 3
+If you haven't done so already, get a fresh copy of  
+**[Phundament 3](https://github.com/schmunk42/phundament/downloads)**
+  
+  * Application Skeleton [github](https://github.com/schmunk42/phundament)
+  * Modules [gitmodules](https://github.com/schmunk42/phundament/blob/master/.gitmodules)
+
+#### Yii Framework
+If you do not have an existing installation  
+**[Yii Framework 1.1.8](http://yii.googlecode.com/files/yii-1.1.8.r3324.tar.gz)**
+
+
+### Setup
 ```
-git clone --recursive git://github.com/schmunk42/phundament.git phundament
+phundament/protected/setup-p3.sh "path/to/yiic/command"
 ```
-
-#### alternative: github download
-https://github.com/downloads/schmunk42/phundament/3.0b-dev.zip
+[Setup script source](https://github.com/schmunk42/phundament/blob/master/protected/setup-p3.sh)
 
 
-### Yii Framework
-As Yii is currently not bundled with Phundament 3 you have to use an 
-exisiting Yii Framework installation to perform this task.
-
-You may download a copy of Yii here: http://www.yiiframework.com/download/ or 
-via 
-```
-git clone https://github.com/yiiext/yii.git /path/to/yii
-```
-
-Database Setup 
---------------
-Create database and update credentials in **config/main.php** > components > db
-
-```
-edit phundament/protected/config/main.php
-```
+### Open
+http://localhost/phundament
 
 
-Setup Script
-------------
-
-```
-./phundament/protected/setup-p3.sh "/absolute/path/to/yiic/command"
-```
-
-We have to use an existing yiic command to create the webapp skeleton. 
-This command will create *index.php* and *yiic.php* files which include your existing Yii framework code.
-
-**Note: This installation is therefore used by your Phundament 3 app.**
+Installation Guide is for Linux, OS X, UNIX.
 
 
-### Webapp Setup
-#### Setup Script (recommended)
-**Note: Anwser only the first question 'Create a Web application' with 'y' for yes. 
-Do not overwrite existing files! Skip '...overwrite?' with 'Enter'.**
-
-##### Manual installation
-```
-/path/to/yiic webapp phundament
-./phundament/protected/setup-p3.sh 
-```
-
-### Database Schema Setup
-#### Setup Script (recommended)
-Anwser 'y' for yes when asked by running the setup script.
-
-##### Alternative: web-based installation
-Go to http://localhost/phundament/index.php?r=p3admin
-Click on 'Manage' in the list of found modules to setup the database schemas.
-The following modules need a database schema: rights, user, p3widgets, p3media.
-Click on 'migrate up 1 step' to create the database tables.
-
-
-### Folder Permissions Setup
-#### Setup Script (recommended)
-Anwser 'y' for yes when asked by running the setup script.
-
-
-### Open your app
-http://localhost/phundament/index.php
-
+Developer Installation
+----------------------
+https://github.com/schmunk42/phundament/wiki/Installation
 
 
 Troubleshooting
 ---------------
-Installation Guide is for Linux, OS X, UNIX.
-
-*Q: I have problems running yiic, is there an alternative?*  
-A: You can run yiic also directly via PHP ```php5 -f /path/to/yii/framework/yiic.php webapp .```
-
-
-*Q: I get this error ```Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION ...```?*  
-A: Look like you're using a PHP 4 installation on the shell, you may adjust your PHP path in *yiic*
-
+https://github.com/schmunk42/phundament/wiki/FAQ
 
 
 Additional Ressources
