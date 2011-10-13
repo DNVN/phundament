@@ -4,11 +4,9 @@
 
 <p>Congratulations! You have successfully created your application.</p>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <tt><?php echo __FILE__; ?></tt></li>
-	<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
-</ul>
+<p>You have to <b>login as admin</b> to change to content of this page.</p>
+
+<p>Hover a container and click on the [+] plus sign to add a widget.</p>
 
 <p>For more details on how to further develop this application, please visit <a href="http://www.phundament.com/">our website</a>.</p>
 
