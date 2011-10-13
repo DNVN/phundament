@@ -5,25 +5,38 @@
 # Since bash script is pretty cool and we haven't coded the PHP installer yet
 
 
-baseDir=`dirname $0`
-pushd $baseDir  > /dev/null
-
-echo "Phundament 3 Setup"
+echo "========================"
+echo "Phundament 3 Quick Setup"
+echo "========================"
+echo ""
+echo "This script will do to following:"
+echo "1. if a valid yiic command is provided as first parameter, it will setup a Yii web application skeleton"
+echo "2. it will call Yii migration commands to setup the database schema"
+echo "3. it create appropriate folder permissions for P3Media the media manager module"
 echo ""
 
+echo "STAGE 1"
 if [ $1 != "" ]; then
-    echo "Note: Skip '...overwrite?' by hitting <enter>";        
+    echo "For providing an out-of-the-box running web application, we had to modify 'config/main','config/console' and 'layouts/main'."
+    echo "Note: Skip '...overwrite?' for these files by hitting <enter>"
     echo ""    
-    pushd .. > /dev/null
-    appDir="`pwd`"
+    pushd `dirname $1` > /dev/null
+    extYiicDir="`pwd`"
     popd  > /dev/null
-    extYiicDir=`dirname $1`
-    echo "$extYiicDir/yiic webapp $appDir"
+    pushd "`dirname $0`/.." > /dev/null
+    appDir="`pwd`"
+    popd > /dev/null
+    echo "Running command: $extYiicDir/yiic webapp $appDir"
+    echo ""    
     $extYiicDir/yiic webapp $appDir
 else
     echo "External yiic command not specified, skipping webapp stage.";
 fi
 
+baseDir=`dirname $0`
+pushd $baseDir  > /dev/null
+
+echo "STAGE 2"
 echo "Apply database migrations? (y/n)"; 
 read choice
 if [ $choice == "y" ]; then
@@ -36,6 +49,7 @@ else
 	echo "Skipped."
 fi
 
+echo "STAGE 3"
 echo "Setup folder permissions? (y/n)"; 
 read choice
 if [ $choice == "y" ]; then
