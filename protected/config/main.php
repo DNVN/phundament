@@ -33,7 +33,7 @@ $mainConfig = array(
 			),
 		),
 		'p3admin' => array(
-			'params' => array('install' => true),
+			'params' => array('install' => false),
 		),
 		'rights' => array(
 			'cssFile' => '/css/rights/default.css'
