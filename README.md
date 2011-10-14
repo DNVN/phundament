@@ -1,10 +1,10 @@
-Phundament 3-0.1
-==================
-**alpha**
+Phundament 3-0.1-RC1
+====================
+**beta**
 
 What is Phundament 3?
 ---------------------
- 1.  Not a CMS ;)
+ 1.  Not a CMS *for those developers who wouldn't read on otherwise ;)*
  2.  Yii Framework based set of modules
  3.  Solid web application foundation
 
@@ -32,15 +32,15 @@ Quick Start
 
 ### Download
 #### Phundament 3
-If you haven't done so already, get a fresh copy of  
-**[Phundament 3](https://github.com/schmunk42/phundament/downloads)**
+If you haven't done so already, a fresh copy is here  
+**[Get Phundament 3](https://github.com/schmunk42/phundament/downloads)**
   
   * Application Skeleton [github](https://github.com/schmunk42/phundament)
   * Modules [gitmodules](https://github.com/schmunk42/phundament/blob/master/.gitmodules)
 
 #### Yii Framework
 If you do not have an existing installation  
-**[Yii Framework 1.1.8](http://yii.googlecode.com/files/yii-1.1.8.r3324.tar.gz)**
+**[Get Yii Framework 1.1.8](http://yii.googlecode.com/files/yii-1.1.8.r3324.tar.gz)**
 
 
 ### Setup
@@ -54,7 +54,7 @@ phundament/protected/setup-p3.sh "path/to/yiic/command"
 http://localhost/phundament
 
 
-Installation Guide is for Linux, OS X, UNIX.
+*Installation Guide is for Linux, OS X, UNIX.*
 
 
 Developer Installation
