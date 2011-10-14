@@ -70,6 +70,7 @@ https://github.com/schmunk42/phundament/wiki/FAQ
 Additional Ressources
 ---------------------
  *  [Wiki](https://github.com/schmunk42/phundament/wiki/)
+ *  [Yii Extension Page](http://www.yiiframework.com/extension/phundament/)
  *  [Quick Start Guide](https://github.com/schmunk42/phundament/wiki/Quick-Start)
  *  [Development Discussion](http://www.yiiframework.com/forum/index.php?/topic/17591-planning-yii-cms-a-different-approach/)
  *  [Phundament Website](http://phundament.com)
