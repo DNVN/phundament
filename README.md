@@ -4,7 +4,7 @@ Phundament 3-0.1-RC1
 
 What is Phundament 3?
 ---------------------
- 1.  Not a CMS ;)
+ 1.  Not a CMS *for those developers who wouldn't read on otherwise ;)*
  2.  Yii Framework based set of modules
  3.  Solid web application foundation
 
