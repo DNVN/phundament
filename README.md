@@ -32,7 +32,7 @@ Quick Start
 
 ### Download
 #### Phundament 3
-If you haven't done so already, a fresh copy is here
+If you haven't done so already, a fresh copy is here  
 **[Get Phundament 3](https://github.com/schmunk42/phundament/downloads)**
   
   * Application Skeleton [github](https://github.com/schmunk42/phundament)
