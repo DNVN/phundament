@@ -15,7 +15,7 @@ It comes with a very minimalistic setup which integrates perfectly into an Yii w
 Try a demo
 ----------
 
-[Demo Phundament 3-0.1-RC1](http://demo.phundament.com/3.0-dev)
+[Demo Phundament 3-0.1-RC1](http://demo.phundament.com/3.0-dev)  
 Login with editor / editor
 
 
@@ -66,8 +66,8 @@ If you do not have an existing installation
 ### Setup
 ```
 phundament/protected/setup-p3.sh "path/to/yiic/command"
-```
-[Setup script source](https://github.com/schmunk42/phundament/blob/master/protected/setup-p3.sh)
+```  
+*[Setup script source](https://github.com/schmunk42/phundament/blob/master/protected/setup-p3.sh)*
 
 
 ### Open
@@ -111,10 +111,11 @@ Resources
  *  [Quick Start Guide](https://github.com/schmunk42/phundament/wiki/Quick-Start)
  *  [Wiki](https://github.com/schmunk42/phundament/wiki/)
  *  [Development Discussion](http://www.yiiframework.com/forum/index.php?/topic/17591-planning-yii-cms-a-different-approach/)
+ *  [Demo Website](http://demo.phundament.com/3.0-dev/)
  *  [Phundament Website](http://phundament.com)
  *  [Company Website](http://herzogkommunikation.de)
 
 
-Contact
--------
-phundament@usrbin.de
+### Contact
+ *  phundament@usrbin.de
+ *  [Twitter](http://twitter.com/#!/phundament)
