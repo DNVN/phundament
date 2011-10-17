@@ -35,6 +35,21 @@ $mainConfig = array(
 		'p3admin' => array(
 			'params' => array('install' => false),
 		),
+		'p3widgets' => array(
+			'params' => array(
+				'widgets' => array(
+					'zii.widgets.CMenu' => 'Menu Widget',
+					'ext.yiiext.widgets.fancybox.EFancyboxWidget'	=> 'Fancy Box',
+					'ext.yiiext.widgets.cycle.ECycleWidget'			=> 'Cycle',
+					'ext.yiiext.widgets.swfobject.ESwfobjectWidget'	=> 'SWF Object',
+					'ext.yiiext.widgets.lipsum.ELipsum'				=> 'Lorem Ipsum Text',
+					#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
+					#'ext.yiiext.widgets.menu.EMenuWidget'				=> 'Extended Menu',
+					#'ext.yiiext.widgets.iconizedMenu.EIconizedMenu'	=> 'Iconized Menu',
+					
+				),
+			),
+		),
 		'rights' => array(
 			'cssFile' => '/css/rights/default.css'
 		),
