@@ -15,8 +15,8 @@ $mainConfig = array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
-		'ext.gtc.components.*', // gtc
-		'application.modules.user.components.*', // Hack: gtc fix
+		#'ext.gtc.components.*', // gtc
+		#'application.modules.user.components.*', // Hack: gtc fix
 
 		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
@@ -39,14 +39,13 @@ $mainConfig = array(
 			'params' => array(
 				'widgets' => array(
 					'zii.widgets.CMenu' => 'Menu Widget',
-					'ext.yiiext.widgets.fancybox.EFancyboxWidget'	=> 'Fancy Box',
-					'ext.yiiext.widgets.cycle.ECycleWidget'			=> 'Cycle',
-					'ext.yiiext.widgets.swfobject.ESwfobjectWidget'	=> 'SWF Object',
-					'ext.yiiext.widgets.lipsum.ELipsum'				=> 'Lorem Ipsum Text',
-					#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
-					#'ext.yiiext.widgets.menu.EMenuWidget'				=> 'Extended Menu',
-					#'ext.yiiext.widgets.iconizedMenu.EIconizedMenu'	=> 'Iconized Menu',
-					
+					'ext.yiiext.widgets.fancybox.EFancyboxWidget' => 'Fancy Box',
+					'ext.yiiext.widgets.cycle.ECycleWidget' => 'Cycle',
+					'ext.yiiext.widgets.swfobject.ESwfobjectWidget' => 'SWF Object',
+					'ext.yiiext.widgets.lipsum.ELipsum' => 'Lorem Ipsum Text',
+				#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
+				#'ext.yiiext.widgets.menu.EMenuWidget'				=> 'Extended Menu',
+				#'ext.yiiext.widgets.iconizedMenu.EIconizedMenu'	=> 'Iconized Menu',
 				),
 			),
 		),
@@ -67,7 +66,10 @@ $mainConfig = array(
 			'urlFormat' => 'path',
 			'rules' => array(
 				'admin' => 'p3admin',
-				'site/login' => 'user/login', // standard login disabled 
+				'site/login' => 'user/login', // standard login disabled
+				'pages/<view:\w+>' => 'site/page', // convenience rule
+
+				'<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
@@ -76,12 +78,12 @@ $mainConfig = array(
 		'db' => array(
 			// SQLite
 			'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-			// MySQL
-			#'connectionString' => 'mysql:host=localhost;dbname=p3',
-			#'emulatePrepare' => true,
-			#'username' => 'test',
-			#'password' => 'test',
-			#'charset' => 'utf8',
+		// MySQL
+		#'connectionString' => 'mysql:host=localhost;dbname=p3',
+		#'emulatePrepare' => true,
+		#'username' => 'test',
+		#'password' => 'test',
+		#'charset' => 'utf8',
 		),
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
@@ -106,11 +108,11 @@ $mainConfig = array(
 			'class' => 'CWidgetFactory',
 			'enableSkin' => true,
 		),
-		'image' => array(
-			'class' => 'ext.p3extensions.components.image.CImageComponent',
-			// GD or ImageMagick
-			'driver' => 'GD',
-		),
+	/* 'image' => array(
+	  'class' => 'ext.p3extensions.components.image.CImageComponent',
+	  // GD or ImageMagick
+	  'driver' => 'GD',
+	  ), */
 	),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
@@ -129,6 +131,7 @@ $config = new P3Configuration(array(
 		dirname(__FILE__) . '/../modules/p3media/config/main.php',
 		dirname(__FILE__) . '/../modules/p3admin/modules-install/user/config/main.php',
 		dirname(__FILE__) . '/../modules/p3admin/modules-install/rights/config/main.php',
+		#dirname(__FILE__) . '/../modules/p3admin/modules-install/webshell/config/main.php',
 		dirname(__FILE__) . '/../extensions/p3extensions/widgets/ckeditor/config/main.php',
 		$mainConfig,
 		dirname(__FILE__) . '/local.php',
