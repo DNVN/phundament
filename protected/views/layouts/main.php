@@ -19,6 +19,7 @@
 
 <body>
 
+<?php if(YII_DEBUG) EUserFlash::setWarningMessage("Warning: YII_DEBUG set to <i>true</i>, please disable this setting in production mode."); ?>
 <?php $this->widget('ext.p3extensions.widgets.userflash.EUserFlash'); ?>
 	
 <div class="container" id="page">
