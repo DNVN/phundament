@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Setup script for Phundament 3
+# Export script for Phundament 3
 #
-# Since bash script is pretty cool and we haven't coded the PHP installer yet
+# Don't judge my bash scripting :)
 
 if [ "$1" == "" ]; then
     echo "No export location provided, exiting."
@@ -22,7 +22,6 @@ if [ -d "$exportDir/$packageName" ]; then
     echo "Error: Export directory exists."
     exit 
 fi
-
 
 echo "Export Phundament 3 from '$appDir' to '$exportDir/$packageName'? (y/n)"
 read choice
