@@ -98,6 +98,7 @@ Resources
  *  [Yii Forum](http://www.yiiframework.com/forum/index.php?/topic/24696-extension-phundament/)
  *  [git clone --recursive](https://github.com/schmunk42/phundament/wiki/Installation) with submodules
  *  [Source Code](https://github.com/schmunk42/phundament/)
+ *  [Google Group phundament-dev](http://groups.google.com/group/phundament-dev/)
 
 
 ### Help needed?
