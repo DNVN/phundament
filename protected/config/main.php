@@ -69,6 +69,8 @@ $mainConfig = array(
 				'site/login' => 'user/login', // standard login disabled
 				'pages/<view:\w+>' => 'site/page', // convenience rule
 
+				'i/<title:\w+>_<preset:\w+>-<id:\d+><extension:.+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
+
 				'<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
