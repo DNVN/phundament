@@ -68,6 +68,7 @@ $mainConfig = array(
 				'admin' => 'p3admin',
 				'site/login' => 'user/login', // standard login disabled
 				'pages/<view:\w+>' => 'site/page', // convenience rule
+				'wiki/<page:\w+>' => 'wiki', // convenience rule
 
 				'i/<title:\w+>_<preset:\w+>-<id:\d+><extension:.+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
 
