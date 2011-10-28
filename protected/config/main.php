@@ -123,7 +123,7 @@ $mainConfig = array(
 		),
 		'langHandler' => array(
 			'class' => 'ext.p3extensions.sets.language.P3LangHandler',
-			'languages' => array('en_us','de_de','ru_ru')
+			'languages' => array('en_us','de_de','ru_ru','ph_debug')
 		),
 	/* 'image' => array(
 	  'class' => 'ext.p3extensions.components.image.CImageComponent',
