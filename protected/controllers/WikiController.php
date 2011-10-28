@@ -7,6 +7,8 @@ class WikiController extends Controller
 {
 	public function actionIndex()
 	{
+		Yii::app()->returnUrl; // TODO: component has to be called, preload does not work
+		
 		$criteria = new CDbCriteria;
 		$criteria->condition = 'controllerId = :controllerId AND actionName = :actionName';
 		$criteria->params = array(':controllerId'=>'wiki', ':actionName'=>'index');

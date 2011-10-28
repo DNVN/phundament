@@ -27,16 +27,21 @@
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		<div id="metamenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+		<?php
+			$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>ucfirst(Yii::app()->user->name)),
 				array('label'=>'Profile', 'url'=>array('/user/profile'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Upload', 'url'=>array('/p3media/import/upload'), 'visible'=>Yii::app()->user->checkAccess('P3media.Import.*')), // uncomment this line after installation
-				array('label'=>'Administration', 'url'=>array('/admin'), 'visible'=>Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
+				array('label'=>'Administration', 'url'=>array('/p3admin'), 'visible'=>Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
 				array('label'=>'Login', 'url'=>Yii::app()->user->loginUrl, 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 			),
 		)); ?>
+		<?php 
+			$this->widget('ext.p3extensions.sets.language.P3LanguageDropDown', array('languages'=>array('en_us'=>'English','de_de'=>'Deutsch')));
+		?>
+
 	</div><!-- metamenu -->
 
 	</div><!-- header -->

@@ -9,15 +9,16 @@ $mainConfig = array(
 	'name' => 'My Phundament 3',
 	'theme' => 'classic',
 	// preloading 'log' component
-	'preload' => array('log'),
+	'preload' => array(
+		'log',
+		'langHandler'),
 	// autoloading model and component classes
 	'import' => array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
 		#'ext.gtc.components.*', // gtc
-		#'application.modules.user.components.*', // Hack: gtc fix
-
+		'application.modules.user.components.*', // Hack: gtc fix for UActiveRecord
 		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
 	'modules' => array(
@@ -41,6 +42,8 @@ $mainConfig = array(
 					'zii.widgets.CMenu' => 'Menu Widget',
 					'ext.yiiext.widgets.fancybox.EFancyboxWidget' => 'Fancy Box',
 					'ext.yiiext.widgets.cycle.ECycleWidget' => 'Cycle',
+									'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
+	
 					'ext.yiiext.widgets.swfobject.ESwfObjectWidget' => 'SWF Object',
 					'ext.yiiext.widgets.lipsum.ELipsum' => 'Lorem Ipsum Text',
 				#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
@@ -61,21 +64,25 @@ $mainConfig = array(
 		),
 		// uncomment the following to enable URLs in path-format
 		'urlManager' => array(
+			'class' => 'ext.p3extensions.sets.language.P3LangUrlManager',
 			'showScriptName' => false,
 			'appendParams' => false, // in general more error resistant
 			'urlFormat' => 'path',
 			'rules' => array(
+				// convenience rules
 				'admin' => 'p3admin',
-				'site/login' => 'user/login', // standard login disabled
-				'pages/<view:\w+>' => 'site/page', // convenience rule
-				'wiki/<page:\w+>' => 'wiki', // convenience rule
-
+				'<lang:[a-z]{2}_[a-z]{2,}>/pages/<view:\w+>' => 'site/page', 
+				'<lang:[a-z]{2}_[a-z]{2,}>/wiki/<page:\w+>' => 'wiki',
+				// p3media
 				'i/<title:\w+>_<preset:\w+>-<id:\d+><extension:.+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
-
-				'<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+				// Yii
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+				// language
+				'<lang:[a-z]{2}_[a-z]{2,}>' => '',
+                '<lang:[a-z]{2}_[a-z]{2,}>/<_c>' => '<_c>',
+                '<lang:[a-z]{2}_[a-z]{2,}>/<_c>/<_a>' => '<_c>/<_a>',
+                '<lang:[a-z]{2}_[a-z]{2,}>/<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
 			),
 		),
 		'db' => array(
@@ -110,6 +117,13 @@ $mainConfig = array(
 		'widgetFactory' => array(
 			'class' => 'CWidgetFactory',
 			'enableSkin' => true,
+		),
+		'returnUrl' => array(
+			'class' => 'ext.p3extensions.components.P3ReturnUrl',
+		),
+		'langHandler' => array(
+			'class' => 'ext.p3extensions.sets.language.P3LangHandler',
+			'languages' => array('en_us','de_de','ru_ru')
 		),
 	/* 'image' => array(
 	  'class' => 'ext.p3extensions.components.image.CImageComponent',
