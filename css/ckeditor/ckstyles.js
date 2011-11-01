@@ -28,12 +28,12 @@ CKEDITOR.addStylesSet( 'my_styles',
     /*	{ name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
 	{ name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
 */
-{
-        name : 'Typewriter'		,
-        element : 'tt'
+    {
+	name : 'Typewriter'		,
+	element : 'tt'
     },
 
-/*	{ name : 'Computer Code'	, element : 'code' },
+    /*	{ name : 'Computer Code'	, element : 'code' },
 	{ name : 'Keyboard Phrase'	, element : 'kbd' },
 	{ name : 'Sample Text'		, element : 'samp' },
 	{ name : 'Variable'			, element : 'var' },
@@ -44,46 +44,87 @@ CKEDITOR.addStylesSet( 'my_styles',
 	{ name : 'Cited Work'		, element : 'cite' },
 	{ name : 'Inline Quotation'	, element : 'q' },*/
 
-{
-    name : 'Two Columns',
-    element : 'table',
-    attributes :
     {
-        'style' : '',
-        'class' : 'twoColumns'
+	name : 'Two Columns',
+	element : 'table',
+	attributes :
+	{
+	    'style' : '',
+	    'class' : 'twoColumns'
 			
-    }
-},
+	}
+    },
 
-/* Object Styles */
-/* we strongly recommend to use CSS classes only! */
+    /* Object Styles */
+    /* we strongly recommend to use CSS classes only! */
 
-{
-    name : 'Image on Left',
-    element : 'img',
-    attributes :
     {
-        'style' : '',
-        'class' : 'left',
-        'border' : '0',
-        'vspace' : '0',
-        'hspace' : '0',
-        'align' : ''
-    }
-},
+	name : 'Image on Left',
+	element : 'img',
+	attributes :
+	{
+	    'style' : '',
+	    'class' : 'left',
+	    'border' : '0',
+	    'vspace' : '0',
+	    'hspace' : '0',
+	    'align' : ''
+	}
+    },
 
-{
-    name : 'Image on Right',
-    element : 'img',
-    attributes :
     {
-        'style' : '',
-        'class' : 'right',
-        'border' : '0',
-        'vspace' : '0',
-        'hspace' : '0',
-        'align' : ''
-    }
-},
+	name : 'Image on Right',
+	element : 'img',
+	attributes :
+	{
+	    'style' : '',
+	    'class' : 'right',
+	    'border' : '0',
+	    'vspace' : '0',
+	    'hspace' : '0',
+	    'align' : ''
+	}
+    },
 
-]);
+    {
+	name : 'Clearfix',
+	element : 'div',
+	attributes : {'class' : 'clearfix'}
+    },
+    {
+	name : '1/1 width, container span-24',
+	element : 'div',
+	attributes : {'class' : 'span-24'}
+    },
+    {
+	name : '3/4 width, container span-20',
+	element : 'div',
+	attributes : {'class' : 'span-18'}
+    },
+    {
+	name : '2/3 width, container span-16',
+	element : 'div',
+	attributes : {'class' : 'span-18'}
+    },
+    {
+	name : '1/2 width, container span-12',
+	element : 'div',
+	attributes : {'class' : 'span-12'}
+    },
+    {
+	name : '1/3 width, container span-8',
+	element : 'div',
+	attributes : {'class' : 'span-8'}
+    },
+    {
+	name : '1/4 width, container span-6',
+	element : 'div',
+	attributes : {'class' : 'span-6'}
+    },
+    {
+	name : '1/6 width, container span-4',
+	element : 'div',
+	attributes : {'class' : 'span-4'}
+    },
+
+    ]);

@@ -30,55 +30,37 @@ CKEDITOR.addTemplates( 'default',
 	title: 'Full width, 50%-50% columns',
 	image: '',
 	description: 'span-12 span-12',
-	html: '<div class="span-12"><p>'+loremIpsum+'</p></div><div class="span-12 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
+	html: '<div class="span-12"><p>'+loremIpsum+'</p></div><div class="span-12 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div>'
     },
     {
 	title: 'Full width, 66%-33% columns',
 	image: '',
 	description: 'span-16 span-8',
-	html: '<div class="span-16"><p>'+loremIpsum+'</p></div><div class="span-8 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
+	html: '<div class="span-16"><p>'+loremIpsum+'</p></div><div class="span-8 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div>'
     },
     {
 	title: 'Full width, 33%-66% columns',
 	image: '',
 	description: 'span-8 span-16',
-	html: '<div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-16 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
+	html: '<div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-16 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div>'
     },
     {
 	title: 'Full width, 33%-33%-33% columns',
 	image: '',
 	description: 'span-8 span-8 span-8',
-	html: '<div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-8 last"><p></p></div><div class="clearfix"></div><p></p>'
+	html: '<div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-8 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div>'
+    },
+    {
+	title: '3/4 width, one column',
+	image: '',
+	description: 'span-20',
+	html: '<div class="span-20"><p>'+loremIpsum+'</p></div><div class="clearfix"></div>'
     },
     {
 	title: '2/3 width, 50%-50% columns',
 	image: '',
-	description: 'span-9 span-9',
-	html: '<div class="span-9"><p>'+loremIpsum+'</p></div><div class="span-9 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
-    },
-    {
-	title: '2/3 width, one column',
-	image: '',
-	description: 'span-16',
-	html: '<div class="span-16"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
-    },
-    {
-	title: '1/2 width, one column',
-	image: '',
-	description: 'span-12',
-	html: '<div class="span-12"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
-    },
-    {
-	title: '1/3 width, one column',
-	image: '',
-	description: 'span-8',
-	html: '<div class="span-8"><p>'+loremIpsum+'</p></div><div class="clearfix"></div><p></p>'
-    },
-    {
-	title: '1/4 width, one column',
-	image: '',
-	description: 'span-6',
-	html: '<div class="span-6"><p></p></div><div class="clearfix"></div><p></p>'
+	description: 'span-8 span-8',
+	html: '<div class="span-8"><p>'+loremIpsum+'</p></div><div class="span-8 last"><p>'+loremIpsum+'</p></div><div class="clearfix"></div>'
     },
 
     ]
