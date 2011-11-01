@@ -42,8 +42,7 @@ $mainConfig = array(
 					'zii.widgets.CMenu' => 'Menu Widget',
 					'ext.yiiext.widgets.fancybox.EFancyboxWidget' => 'Fancy Box',
 					'ext.yiiext.widgets.cycle.ECycleWidget' => 'Cycle',
-									'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
-	
+					'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
 					'ext.yiiext.widgets.swfobject.ESwfObjectWidget' => 'SWF Object',
 					'ext.yiiext.widgets.lipsum.ELipsum' => 'Lorem Ipsum Text',
 				#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
@@ -51,6 +50,74 @@ $mainConfig = array(
 				#'ext.yiiext.widgets.iconizedMenu.EIconizedMenu'	=> 'Iconized Menu',
 				),
 			),
+		),
+		'p3media' => array(
+			'params' => array(
+				'presets' => array(
+					'span24' => array(
+						'name' => '1/1 width, jpeg',
+						'commands' => array(
+							'resize' => array(950, 950, 4), // Image::WIDTH
+							'quality' => 85
+						),
+						'type' => 'jpeg'
+					),
+					'span18' => array(
+						'name' => '2/3 width, jpeg',
+						'commands' => array(
+							'resize' => array(710, 710, 4), // Image::WIDTH
+							'quality' => 85
+						),
+						'type' => 'jpeg'
+					),
+					'span12' => array(
+						'name' => '1/2 width, jpeg',
+						'commands' => array(
+							'resize' => array(470, 470, 4), // Image::WIDTH
+							'quality' => 85
+						),
+						'type' => 'jpeg'
+					),
+					'span8' => array(
+						'name' => '1/3 width, jpeg',
+						'commands' => array(
+							'resize' => array(310, 310, 4), // Image::WIDTH
+							'quality' => 85
+						),
+						'master' => 4,
+						'type' => 'jpeg'
+					),
+					'span6' => array(
+						'name' => '1/4 width, jpeg',
+						'commands' => array(
+							'resize' => array(230, 230, 4), // Image::WIDTH
+							'quality' => 85
+						),
+						'type' => 'jpeg'
+					),
+					'icon64' => array(
+						'name' => 'Icon 64x64',
+						'commands' => array(
+							'resize' => array(64, 64),
+						),
+						'type' => 'png'
+					),
+					'icon32' => array(
+						'name' => 'Icon 64x64',
+						'commands' => array(
+							'resize' => array(32, 32),
+						),
+						'type' => 'png'
+					),
+					'icon16' => array(
+						'name' => 'Icon 16x16',
+						'commands' => array(
+							'resize' => array(16, 16),
+						),
+						'type' => 'png'
+					),
+				)
+			)
 		),
 		'rights' => array(
 			'cssFile' => '/css/rights/default.css'
@@ -62,7 +129,14 @@ $mainConfig = array(
 			// enable cookie-based authentication
 			'allowAutoLogin' => true,
 		),
-		// uncomment the following to enable URLs in path-format
+
+		'returnUrl' => array(
+			'class' => 'ext.p3extensions.components.P3ReturnUrl',
+		),
+		'langHandler' => array(
+			'class' => 'ext.p3extensions.sets.language.P3LangHandler',
+			'languages' => array('en_us', 'de_de', 'ru_ru', 'ph_debug')
+		),
 		'urlManager' => array(
 			'class' => 'ext.p3extensions.sets.language.P3LangUrlManager',
 			'showScriptName' => false,
@@ -71,18 +145,18 @@ $mainConfig = array(
 			'rules' => array(
 				// convenience rules
 				'admin' => 'p3admin',
-				'<lang:[a-z]{2}_[a-z]{2,}>/pages/<view:\w+>' => 'site/page', 
+				'<lang:[a-z]{2}_[a-z]{2,}>/pages/<view:\w+>' => 'site/page',
 				'<lang:[a-z]{2}_[a-z]{2,}>/wiki/<page:\w+>' => 'wiki',
 				// p3media
-				'i/<title:\w+>_<preset:\w+>-<id:\d+><extension:.+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
+				'<lang:[a-z]{2}_[a-z]{2,}>/i/<title:\w+>_<preset:\w+>-<id:\d+><extension:.+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
 				// Yii
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				// language
 				'<lang:[a-z]{2}_[a-z]{2,}>' => '',
-                '<lang:[a-z]{2}_[a-z]{2,}>/<_c>' => '<_c>',
-                '<lang:[a-z]{2}_[a-z]{2,}>/<_c>/<_a>' => '<_c>/<_a>',
-                '<lang:[a-z]{2}_[a-z]{2,}>/<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
+				'<lang:[a-z]{2}_[a-z]{2,}>/<_c>' => '<_c>',
+				'<lang:[a-z]{2}_[a-z]{2,}>/<_c>/<_a>' => '<_c>/<_a>',
+				'<lang:[a-z]{2}_[a-z]{2,}>/<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
 			),
 		),
 		'db' => array(
@@ -118,18 +192,6 @@ $mainConfig = array(
 			'class' => 'CWidgetFactory',
 			'enableSkin' => true,
 		),
-		'returnUrl' => array(
-			'class' => 'ext.p3extensions.components.P3ReturnUrl',
-		),
-		'langHandler' => array(
-			'class' => 'ext.p3extensions.sets.language.P3LangHandler',
-			'languages' => array('en_us','de_de','ru_ru','ph_debug')
-		),
-	/* 'image' => array(
-	  'class' => 'ext.p3extensions.components.image.CImageComponent',
-	  // GD or ImageMagick
-	  'driver' => 'GD',
-	  ), */
 	),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
@@ -140,7 +202,7 @@ $mainConfig = array(
 );
 
 
-
+// include external configs
 require_once(dirname(__FILE__) . '/../extensions/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
 		dirname(__FILE__) . '/../modules/p3admin/config/main.php',
