@@ -2,10 +2,4 @@
 @import url("../screen.css");
 
 BODY {
-    font-family: Arial, sans;
-}
-
-IMG {
-    max-width: 290px;
-    height: auto;
 }

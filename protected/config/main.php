@@ -54,62 +54,62 @@ $mainConfig = array(
 		'p3media' => array(
 			'params' => array(
 				'presets' => array(
-					'span24' => array(
-						'name' => '1/1 width, jpeg',
+					'span-24' => array(
+						'name' => '1/1 width (span-24), jpg',
 						'commands' => array(
 							'resize' => array(950, 950, 4), // Image::WIDTH
 							'quality' => 85
 						),
-						'type' => 'jpeg'
+						'type' => 'jpg'
 					),
-					'span18' => array(
-						'name' => '2/3 width, jpeg',
+					'span-18' => array(
+						'name' => '2/3 width (span-18), jpg',
 						'commands' => array(
 							'resize' => array(710, 710, 4), // Image::WIDTH
 							'quality' => 85
 						),
-						'type' => 'jpeg'
+						'type' => 'jpg'
 					),
-					'span12' => array(
-						'name' => '1/2 width, jpeg',
+					'span-12' => array(
+						'name' => '1/2 width (span-12), jpg',
 						'commands' => array(
 							'resize' => array(470, 470, 4), // Image::WIDTH
 							'quality' => 85
 						),
-						'type' => 'jpeg'
+						'type' => 'jpg'
 					),
-					'span8' => array(
-						'name' => '1/3 width, jpeg',
+					'span-8' => array(
+						'name' => '1/3 width (span-8), jpg',
 						'commands' => array(
 							'resize' => array(310, 310, 4), // Image::WIDTH
 							'quality' => 85
 						),
 						'master' => 4,
-						'type' => 'jpeg'
+						'type' => 'jpg'
 					),
-					'span6' => array(
-						'name' => '1/4 width, jpeg',
+					'span-6' => array(
+						'name' => '1/4 width (span-6), jpg',
 						'commands' => array(
 							'resize' => array(230, 230, 4), // Image::WIDTH
 							'quality' => 85
 						),
-						'type' => 'jpeg'
+						'type' => 'jpg'
 					),
-					'icon64' => array(
+					'icon-64' => array(
 						'name' => 'Icon 64x64',
 						'commands' => array(
 							'resize' => array(64, 64),
 						),
 						'type' => 'png'
 					),
-					'icon32' => array(
+					'icon-32' => array(
 						'name' => 'Icon 64x64',
 						'commands' => array(
 							'resize' => array(32, 32),
 						),
 						'type' => 'png'
 					),
-					'icon16' => array(
+					'icon-16' => array(
 						'name' => 'Icon 16x16',
 						'commands' => array(
 							'resize' => array(16, 16),
@@ -148,7 +148,7 @@ $mainConfig = array(
 				'<lang:[a-z]{2}_[a-z]{2,}>/pages/<view:\w+>' => 'site/page',
 				'<lang:[a-z]{2}_[a-z]{2,}>/wiki/<page:\w+>' => 'wiki',
 				// p3media
-				'<lang:[a-z]{2}_[a-z]{2,}>/i/<title:\w+>_<preset:\w+>-<id:\d+><extension:.+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
+				'<lang:[a-z]{2}_[a-z]{2,}>/img/<preset:[a-zA-Z0-9-._]+>/<title:.+>_<id:\d+><extension:.[a-zA-Z0-9]{1,}+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
 				// Yii
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
