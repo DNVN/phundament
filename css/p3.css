@@ -309,3 +309,12 @@ DIV.grid-view .button-column {
     white-space: nowrap;
 }
 
+
+.wiki-navigation ul {
+    padding-bottom: 1em;
+}
+
+.wiki-navigation LI {
+    float: left;
+    margin-right: 2em;
+}
