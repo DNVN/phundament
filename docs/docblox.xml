@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<docblox>
+    <parser>
+	<target>output</target>
+    </parser>
+    <transformer>
+	<target>output</target>
+    </transformer>
+    <files>
+	<directory>../protected/modules/p3admin</directory>
+	<directory>../protected/modules/p3widgets</directory>
+	<directory>../protected/modules/p3media</directory>
+	<directory>../protected/extensions/p3extensions</directory>
+	<ignore>*/migrations/*</ignore>
+    </files>
+</docblox>
