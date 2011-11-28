@@ -4,6 +4,7 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
 $mainConfig = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'My Phundament 3',
@@ -141,7 +142,7 @@ $mainConfig = array(
 			'class' => 'ext.p3extensions.sets.language.P3LangUrlManager',
 			'showScriptName' => false,
 			'appendParams' => false, // in general more error resistant
-			'urlFormat' => 'path',
+			'urlFormat' => 'get',
 			'rules' => array(
 				// convenience rules
 				'admin' => 'p3admin',
