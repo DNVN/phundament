@@ -30,7 +30,7 @@
 				<div id="metamenu">
 					<div class="languageSelection">
 						<?php
-						$this->widget('ext.p3extensions.sets.language.P3LanguageDropDown', array('languages' => array('en_us' => 'English', 'de_de' => 'Deutsch')));
+						$this->widget('ext.p3extensions.widgets.P3LanguageDropDown', array('languages' => array('en_us' => 'English', 'de_de' => 'Deutsch')));
 						?>
 					</div>
 					<?php

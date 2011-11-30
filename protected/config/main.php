@@ -19,7 +19,7 @@ $mainConfig = array(
 		'application.components.*',
 		'zii.widgets.*',
 		#'ext.gtc.components.*', // gtc
-		'application.modules.user.components.*', // Hack: gtc fix for UActiveRecord
+		'application.modules.user.components.*', // TODO - Hack: gtc fix for UActiveRecord
 		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
 	'modules' => array(
@@ -130,16 +130,15 @@ $mainConfig = array(
 			// enable cookie-based authentication
 			'allowAutoLogin' => true,
 		),
-
 		'returnUrl' => array(
 			'class' => 'ext.p3extensions.components.P3ReturnUrl',
 		),
 		'langHandler' => array(
-			'class' => 'ext.p3extensions.sets.language.P3LangHandler',
+			'class' => 'ext.p3extensions.components.P3LangHandler',
 			'languages' => array('en_us', 'de_de', 'ru_ru', 'ph_debug')
 		),
 		'urlManager' => array(
-			'class' => 'ext.p3extensions.sets.language.P3LangUrlManager',
+			'class' => 'ext.p3extensions.components.P3LangUrlManager',
 			'showScriptName' => false,
 			'appendParams' => false, // in general more error resistant
 			'urlFormat' => 'get',
@@ -153,7 +152,7 @@ $mainConfig = array(
 				// Yii
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-				// language
+				// general language and route handling
 				'<lang:[a-z]{2}_[a-z]{2,}>' => '',
 				'<lang:[a-z]{2}_[a-z]{2,}>/<_c>' => '<_c>',
 				'<lang:[a-z]{2}_[a-z]{2,}>/<_c>/<_a>' => '<_c>/<_a>',
