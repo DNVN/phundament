@@ -25,27 +25,34 @@
 
 		<div class="container" id="page">
 
-			<div id="header">
-				<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-				<div id="metamenu">
-					<div class="languageSelection">
-						<?php
-						$this->widget('ext.p3extensions.widgets.P3LanguageDropDown', array('languages' => array('en_us' => 'English', 'de_de' => 'Deutsch')));
-						?>
-					</div>
+			<div id="metamenu">
+				<div class="languageSelection">
 					<?php
-					$this->widget('zii.widgets.CMenu', array(
-						'items' => array(
-							array('label' => ucfirst(Yii::app()->user->name)),
-							array('label' => 'Profile', 'url' => array('/user/profile'), 'visible' => !Yii::app()->user->isGuest),
-							array('label' => 'Upload', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')), // uncomment this line after installation
-							array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
-							array('label' => 'Login', 'url' => Yii::app()->user->loginUrl, 'visible' => Yii::app()->user->isGuest),
-							array('label' => 'Logout', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
-						),
-					));
+					$this->widget('ext.p3extensions.widgets.P3LanguageDropDown', array('languages' => array('en_us' => 'English', 'de_de' => 'Deutsch')));
 					?>
-				</div><!-- metamenu -->
+				</div>
+				<?php
+				$this->widget('zii.widgets.CMenu', array(
+					'items' => array(
+						array('label' => ucfirst(Yii::app()->user->name)),
+						array('label' => 'Profile', 'url' => array('/user/profile'), 'visible' => !Yii::app()->user->isGuest),
+						array('label' => 'Upload', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')), // uncomment this line after installation
+						array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
+						array('label' => 'Login', 'url' => Yii::app()->user->loginUrl, 'visible' => Yii::app()->user->isGuest),
+						array('label' => 'Logout', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
+					),
+				));
+				?>
+			</div><!-- metamenu -->
+
+			<div id="header">
+				<?php $this->widget('p3widgets.components.P3WidgetContainer', 
+					array(
+						'id' => 'header', 
+						'varyByRequestParam' => 'view',
+						'controlPosition' => 'bottom'
+					)) ?>
+				<!--<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>-->
 			</div><!-- header -->
 
 			<div id="mainmenu">
