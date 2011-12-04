@@ -10,8 +10,8 @@ class WikiController extends Controller
 		Yii::app()->returnUrl; // TODO: component has to be called, preload does not work
 		
 		$criteria = new CDbCriteria;
-		$criteria->condition = 'controllerId = :controllerId AND actionName = :actionName';
-		$criteria->params = array(':controllerId'=>'wiki', ':actionName'=>'index');
+		$criteria->condition = 'controllerId = :controllerId AND actionName = :actionName AND requestParam != :universalValue';
+		$criteria->params = array(':controllerId'=>'wiki', ':actionName'=>'index', ':universalValue' => P3WidgetContainer::UNIVERSAL_VALUE);
 		$criteria->order = 'requestParam';
 		$criteria->group = 'requestParam';
 		$models = Widget::model()->findAll($criteria);
