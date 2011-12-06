@@ -12,7 +12,6 @@ body
 
 #page
 {
-    border: 0px solid #ccc;
 }
 
 #header
@@ -80,7 +79,7 @@ body
 
 #mainmenu
 {
-    background:#666;
+    background:#aaa;
 }
 
 #mainmenu ul
@@ -106,8 +105,8 @@ body
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-    color: #fff;
-    background-color:#333;
+    color: #666;
+    background-color:#fff;
     text-decoration:none;
 }
 

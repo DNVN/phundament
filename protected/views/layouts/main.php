@@ -31,6 +31,14 @@
 					$this->widget('ext.p3extensions.widgets.P3LanguageDropDown', array('languages' => array('en_us' => 'English', 'de_de' => 'Deutsch')));
 					?>
 				</div>
+				<div class="languageSelection">
+					<?php
+					if (Yii::app()->user->checkAccess('P3Widgets.Widget.*')) {
+						echo CHtml::label('Admin Controls', 'P3WidgetContainerShowControls');
+						echo CHtml::checkBox('P3WidgetContainerShowControls', true);
+					}
+					?>
+				</div>
 				<?php
 				$this->widget('zii.widgets.CMenu', array(
 					'items' => array(
@@ -46,12 +54,13 @@
 			</div><!-- metamenu -->
 
 			<div id="header">
-				<?php $this->widget('p3widgets.components.P3WidgetContainer', 
-					array(
-						'id' => 'header', 
-						'varyByRequestParam' => 'view',
-						'controlPosition' => 'bottom'
-					)) ?>
+				<?php
+				$this->widget('p3widgets.components.P3WidgetContainer', array(
+					'id' => 'header',
+					'varyByRequestParam' => 'view',
+					'controlPosition' => 'bottom'
+				))
+				?>
 				<!--<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>-->
 			</div><!-- header -->
 
@@ -76,13 +85,13 @@
 				?><!-- breadcrumbs -->
 			<?php endif ?>
 
-			<?php echo $content; ?>
+<?php echo $content; ?>
 
 			<div id="footer">
 				Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
 				All Rights Reserved.<br/>
 				<?php echo CHtml::link("Phundament 3", "http://phundament.com"); ?><br/>
-				<?php echo Yii::powered(); ?>
+<?php echo Yii::powered(); ?>
 			</div><!-- footer -->
 
 		</div><!-- page -->
