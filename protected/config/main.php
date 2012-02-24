@@ -135,7 +135,7 @@ $mainConfig = array(
 		),
 		'langHandler' => array(
 			'class' => 'ext.p3extensions.components.P3LangHandler',
-			'languages' => array('en_us', 'de_de', 'ru_ru', 'ph_debug')
+			'languages' => array('en', 'de', 'ru', 'ph_debug')
 		),
 		'urlManager' => array(
 			'class' => 'ext.p3extensions.components.P3LangUrlManager',
@@ -145,18 +145,18 @@ $mainConfig = array(
 			'rules' => array(
 				// convenience rules
 				'admin' => 'p3admin',
-				'<lang:[a-z]{2}_[a-z]{2,}>/pages/<view:\w+>' => 'site/page',
-				'<lang:[a-z]{2}_[a-z]{2,}>/wiki/<page:\w+>' => 'wiki',
+				'<lang:[a-z]{2}>/pages/<view:\w+>' => 'site/page',
+				'<lang:[a-z]{2}>/wiki/<page:\w+>' => 'wiki',
 				// p3media
-				'<lang:[a-z]{2}_[a-z]{2,}>/img/<preset:[a-zA-Z0-9-._]+>/<title:.+>_<id:\d+><extension:.[a-zA-Z0-9]{1,}+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
+				'<lang:[a-z]{2}>/img/<preset:[a-zA-Z0-9-._]+>/<title:.+>_<id:\d+><extension:.[a-zA-Z0-9]{1,}+>' => 'p3media/file/image', // p3media images, TESTING: disable in case of problems
 				// Yii
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				// general language and route handling
-				'<lang:[a-z]{2}_[a-z]{2,}>' => '',
-				'<lang:[a-z]{2}_[a-z]{2,}>/<_c>' => '<_c>',
-				'<lang:[a-z]{2}_[a-z]{2,}>/<_c>/<_a>' => '<_c>/<_a>',
-				'<lang:[a-z]{2}_[a-z]{2,}>/<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
+				'<lang:[a-z]{2}>' => '',
+				'<lang:[a-z]{2}>/<_c>' => '<_c>',
+				'<lang:[a-z]{2}>/<_c>/<_a>' => '<_c>/<_a>',
+				'<lang:[a-z]{2}>/<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
 			),
 		),
 		'db' => array(
@@ -208,6 +208,7 @@ $config = new P3Configuration(array(
 		dirname(__FILE__) . '/../modules/p3admin/config/main.php',
 		dirname(__FILE__) . '/../modules/p3widgets/config/main.php',
 		dirname(__FILE__) . '/../modules/p3media/config/main.php',
+		#dirname(__FILE__) . '/../modules/p3pages/config/main.php',
 		dirname(__FILE__) . '/../modules/p3admin/modules-install/user/config/main.php',
 		dirname(__FILE__) . '/../modules/p3admin/modules-install/rights/config/main.php',
 		#dirname(__FILE__) . '/../modules/p3admin/modules-install/webshell/config/main.php',
