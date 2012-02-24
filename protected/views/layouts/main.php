@@ -28,40 +28,53 @@
 			<div id="metamenu">
 				<div class="languageSelection">
 					<?php
-					$this->widget('ext.p3extensions.widgets.P3LanguageDropDown', array('languages' => array('en_us' => 'English', 'de_de' => 'Deutsch')));
+					$this->widget('ext.p3extensions.widgets.P3LanguageDropDown', array('languages' => array('en' => 'English', 'de' => 'Deutsch')));
 					?>
 				</div>
 				<div class="languageSelection">
 					<?php
-					if (Yii::app()->user->checkAccess('P3Widgets.Widget.*')) {
-						echo CHtml::label('Admin Controls', 'P3WidgetContainerShowControls');
-						echo CHtml::checkBox('P3WidgetContainerShowControls', true);
+					try {
+						if (Yii::app()->user->checkAccess('P3Widgets.Widget.*')) {
+							echo CHtml::label('Admin Controls', 'P3WidgetContainerShowControls');
+							echo CHtml::checkBox('P3WidgetContainerShowControls', true);
+						}
+					} catch (Exception $e) {
+						echo "ERROR: ".$e->getMessage();
 					}
 					?>
 				</div>
 				<?php
-				$this->widget('zii.widgets.CMenu', array(
-					'items' => array(
-						array('label' => ucfirst(Yii::app()->user->name)),
-						array('label' => 'Profile', 'url' => array('/user/profile'), 'visible' => !Yii::app()->user->isGuest),
-						array('label' => 'Upload', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')), // uncomment this line after installation
-						array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
-						array('label' => 'Login', 'url' => Yii::app()->user->loginUrl, 'visible' => Yii::app()->user->isGuest),
-						array('label' => 'Logout', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
-					),
-				));
+				try {
+					$this->widget('zii.widgets.CMenu', array(
+						'items' => array(
+							array('label' => ucfirst(Yii::app()->user->name)),
+							array('label' => 'Profile', 'url' => array('/user/profile'), 'visible' => !Yii::app()->user->isGuest),
+							array('label' => 'Upload', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')), // uncomment this line after installation
+							array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
+							array('label' => 'Login', 'url' => Yii::app()->user->loginUrl, 'visible' => Yii::app()->user->isGuest),
+							array('label' => 'Logout', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
+						),
+					));
+				} catch (Exception $e) {
+					echo "ERROR: ".$e->getMessage();
+				}
 				?>
 			</div><!-- metamenu -->
 
 			<div id="header">
 				<?php
-				$this->widget('p3widgets.components.P3WidgetContainer', array(
-					'id' => 'header',
-					'varyByRequestParam' => 'view',
-					'controlPosition' => 'bottom'
-				))
+				// TODO - ugly hack
+				try {
+					$this->widget('p3widgets.components.P3WidgetContainer', array(
+						'id' => 'header',
+						'varyByRequestParam' => 'view',
+						'controlPosition' => 'bottom'
+					));
+				} catch (Exception $e) {
+					echo "ERROR: ".$e->getMessage();
+				}
 				?>
-				<!--<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>-->
+				<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 			</div><!-- header -->
 
 			<div id="mainmenu">
@@ -85,13 +98,13 @@
 				?><!-- breadcrumbs -->
 			<?php endif ?>
 
-<?php echo $content; ?>
+			<?php echo $content; ?>
 
 			<div id="footer">
 				Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
 				All Rights Reserved.<br/>
 				<?php echo CHtml::link("Phundament 3", "http://phundament.com"); ?><br/>
-<?php echo Yii::powered(); ?>
+				<?php echo Yii::powered(); ?>
 			</div><!-- footer -->
 
 		</div><!-- page -->
