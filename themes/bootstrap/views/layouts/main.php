@@ -85,8 +85,10 @@
 									'items' => array(
 										array('label' => 'Phundament 3', 'url' => '#', 'visible' => !Yii::app()->user->isGuest, 'items' => array(
 												array('label' => 'Phundament 3.1-dev'),
-												array('label' => 'Backend', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')), // uncomment this line after installation
-												array('label' => 'Upload Media', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')), // uncomment this line after installation
+												array('label' => 'Backend', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')),
+												array('label' => 'Upload Media', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+												'---',
+												array('label' => 'Visit Phundament Website', 'url' => 'http://phundament.com', 'visible' => Yii::app()->user->checkAccess('Admin')),
 										)),
 										array('label' => ucfirst(Yii::app()->user->name), 'visible' => !Yii::app()->user->isGuest, 'items' => array(
 												array('label' => 'User Settings'),
@@ -125,7 +127,7 @@
 			<hr>
 
 			<footer>
-				<p>&copy; Company 2012</p>
+				<p>&copy; Company 2012 | powered by <a href="http://phundament.com">Phundament 3</a></p>
 			</footer>
 
 		</div> <!-- /container -->
