@@ -27,3 +27,9 @@
 [submodule "protected/extensions/yiiext"]
 	path = protected/extensions/yiiext
 	url = https://github.com/schmunk42/yiiext.git
+[submodule "protected/extensions/yii-bootstrap"]
+	path = protected/extensions/yii-bootstrap
+	url = https://schmunk42@github.com/schmunk42/yii-bootstrap.git
+[submodule "protected/extensions/yii-less"]
+	path = protected/extensions/yii-less
+	url = https://schmunk42@github.com/schmunk42/yii-less.git
