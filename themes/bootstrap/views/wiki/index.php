@@ -1,21 +1,25 @@
 
-<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'hero', 'varyByRequestParam' => 'view')) ?>
-
-<!-- Example row of columns -->
 <div class="row">
-	<div class="span4">
-		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'left', 'varyByRequestParam' => 'view')) ?>
+	<?php
+	$page = ((isset($_GET['page'])) ? $_GET['page'] : '');
+	$this->layout = "//layouts/main";
+	$this->breadcrumbs = array(
+		'Wiki' => array('/wiki'),
+		$page
+	);
+	?>
+	<div class="span10 offset2">
+	<h1><?php echo $this->id . '/' . $page; ?></h1>
 	</div>
-	<div class="span4">
-		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'middle', 'varyByRequestParam' => 'view')) ?>
+	<div class="span2">
+		<?php
+		$this->widget('bootstrap.widgets.BootMenu', array(
+			'type' => 'list',
+			'items' => $items,
+		));
+		?>
 	</div>
-	<div class="span4">
-		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'right', 'varyByRequestParam' => 'view')) ?>
-	</div>
-</div>
-
-<div class="row">
-	<div class="span12">
-		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main', 'varyByRequestParam' => 'view')) ?>
+	<div class="span10">
+		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'wiki', 'varyByRequestParam' => 'page')) ?>
 	</div>
 </div>
