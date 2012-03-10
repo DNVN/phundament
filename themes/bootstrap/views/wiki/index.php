@@ -9,17 +9,22 @@
 	);
 	?>
 	<div class="span10 offset2">
-	<h1><?php echo $this->id . '/' . $page; ?></h1>
+
+		<?php
+		$this->widget('bootstrap.widgets.BootBreadcrumbs', array(
+			'links' => array($this->id => array('/wiki'), $page),
+		));
+		?>
 	</div>
 	<div class="span2">
 		<?php
 		$this->widget('bootstrap.widgets.BootMenu', array(
 			'type' => 'list',
-			'items' => $items,
+			'items' => array_merge(array(array('label' => 'WIKI PAGES')), $items)
 		));
 		?>
 	</div>
 	<div class="span10">
-		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'wiki', 'varyByRequestParam' => 'page')) ?>
+<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'wiki', 'varyByRequestParam' => 'page')) ?>
 	</div>
 </div>
