@@ -60,13 +60,12 @@
 								array('label' => 'English', 'url' => array('/', 'lang' => 'en')),
 								array('label' => 'Deutsch', 'url' => array('/', 'lang' => 'de')),
 								array('label' => 'Français', 'url' => array('/', 'lang' => 'fr')),
-								array('label' => 'русски', 'url' => array('/', 'lang' => 'ru')
+								array('label' => 'Русски', 'url' => array('/', 'lang' => 'ru')
 								),
 							)
 						)
 					)
 				),
-				'-',
 				array(
 					'class' => 'bootstrap.widgets.BootMenu',
 					'htmlOptions' => array('class' => 'pull-right'),
