@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		
+
 
 		<style type="text/css">
 			body {
@@ -20,7 +20,7 @@
 		<!--[if lt IE 9]>
 		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		
+
 		<link href="css/blueprint-bootstrap.css" rel="stylesheet">
 
 		<!-- Le fav and touch icons -->
@@ -57,12 +57,11 @@
 							'label' => Yii::app()->language, 'url' => '#',
 							'items' => array(
 								array('label' => 'Choose Language'),
-								array('label' => 'English', 'url' => array('/', 'lang' => 'en')),
-								array('label' => 'Deutsch', 'url' => array('/', 'lang' => 'de')),
-								array('label' => 'Français', 'url' => array('/', 'lang' => 'fr')),
-								array('label' => 'Русски', 'url' => array('/', 'lang' => 'ru')
-								),
-							)
+								array('label' => 'English', 'url' => array_merge(array(''), $_GET, array('lang' => 'en'))),
+								array('label' => 'Deutsch', 'url' => array_merge(array(''), $_GET, array('lang' => 'de'))),
+								array('label' => 'Français', 'url' => array_merge(array(''), $_GET, array('lang' => 'fr'))),
+								array('label' => 'Русски', 'url' => array_merge(array(''), $_GET, array('lang' => 'ru'))),
+							),
 						)
 					)
 				),
@@ -72,7 +71,7 @@
 					'items' => array(
 						array('label' => 'Phundament 3', 'url' => '#', 'visible' => !Yii::app()->user->isGuest, 'items' => array(
 								array('label' => 'Phundament 3.1-dev'),
-								array('label' => 'Backend', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')),
+								array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')),
 								array('label' => 'Upload Media', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
 								'---',
 								array('label' => 'Visit Phundament Website', 'url' => 'http://phundament.com', 'visible' => Yii::app()->user->checkAccess('Admin')),

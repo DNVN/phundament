@@ -5,7 +5,7 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
-$_baseDir = (dirname($_SERVER['SCRIPT_NAME']) != '/')?dirname($_SERVER['SCRIPT_NAME']):'';
+$_baseDir = (dirname($_SERVER['SCRIPT_NAME']) != '/') ? dirname($_SERVER['SCRIPT_NAME']) : '';
 
 $mainConfig = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
@@ -45,13 +45,14 @@ $mainConfig = array(
 		'p3widgets' => array(
 			'params' => array(
 				'widgets' => array(
-					#'zii.widgets.CMenu' => 'Menu Widget',
+					'ext.yii-bootstrap.widgets.BootHero' => 'Bootstrap Hero',
 					'ext.yiiext.widgets.fancybox.EFancyboxWidget' => 'Fancy Box',
 					'ext.yiiext.widgets.cycle.ECycleWidget' => 'Cycle',
-					'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
 					'ext.yiiext.widgets.swfobject.ESwfObjectWidget' => 'SWF Object',
 					'ext.yiiext.widgets.lipsum.ELipsum' => 'Lorem Ipsum Text',
-					'ext.yii-bootstrap.widgets.BootHero' => 'Bootstrap Hero',
+					// The following widgets work basically, but are hard to handle or can break the app when using incorrect params.
+				#'zii.widgets.CMenu' => 'Menu Widget',
+				#'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
 				#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
 				#'ext.yiiext.widgets.menu.EMenuWidget'				=> 'Extended Menu',
 				#'ext.yiiext.widgets.iconizedMenu.EIconizedMenu'	=> 'Iconized Menu',
@@ -241,12 +242,12 @@ $mainConfig = array(
 			/* Toolbar */
 			'toolbar_Custom' => array(
 				array('Templates', '-', 'Maximize', 'Source', 'ShowBlocks', '-', 'Undo', 'Redo', '-', 'PasteText', 'PasteFromWord'),
-				array('JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'NumberedList', 'BulletedList','-','BidiLtr','BidiRtl'),
+				array('JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'NumberedList', 'BulletedList', '-', 'BidiLtr', 'BidiRtl'),
 				array('Table', 'Blockquote'),
 				'/',
 				array('Image', 'Flash', '-', 'Link', 'Unlink'),
 				array('Bold', 'Italic', 'Underline', '-', 'UnorderedList', 'OrderedList', '-', 'RemoveFormat'),
-				array('CreateDiv','Format', 'Styles')),
+				array('CreateDiv', 'Format', 'Styles')),
 			'toolbar' => "Custom",
 			/* Settings */
 			'startupOutlineBlocks' => true,
@@ -255,27 +256,24 @@ $mainConfig = array(
 			'templates_replaceContent' => true,
 			#'ignoreEmptyParagraph' => false,
 			#'forcePasteAsPlainText' => true,
-			'contentsCss' => $_baseDir.'/themes/bootstrap/ckeditor/ckeditor.css',
+			'contentsCss' => $_baseDir . '/themes/bootstrap/ckeditor/ckeditor.css',
 			'bodyId' => 'ckeditor',
 			'bodyClass' => 'ckeditor',
 			/* Assets will be published with publishAsset() */
-			
-			'templates_files' => array($_baseDir.'/themes/bootstrap/ckeditor/cktemplates.js'),
-			'stylesCombo_stylesSet' => 'my_styles:'.$_baseDir.'/themes/bootstrap/ckeditor/ckstyles.js',
-			
+
+			'templates_files' => array($_baseDir . '/themes/bootstrap/ckeditor/cktemplates.js'),
+			'stylesCombo_stylesSet' => 'my_styles:' . $_baseDir . '/themes/bootstrap/ckeditor/ckstyles.js',
 			/* Standard-way to specify URLs - deprecated */
-			/*'filebrowserBrowseUrl' => '/p3media/ckeditor',
-			'filebrowserImageBrowseUrl' => '/p3media/ckeditor/image',
-			'filebrowserFlashBrowseUrl' => '/p3media/ckeditor/flash',*/
+			/* 'filebrowserBrowseUrl' => '/p3media/ckeditor',
+			  'filebrowserImageBrowseUrl' => '/p3media/ckeditor/image',
+			  'filebrowserFlashBrowseUrl' => '/p3media/ckeditor/flash', */
 			// 'filebrowserUploadUrl' => 'null', // can not use, pre-resizing of images
 
 			/* URLs will be parsed with createUrl() */
-			'filebrowserBrowseCreateUrl'		=> array('/p3media/ckeditor'),
-			'filebrowserImageBrowseCreateUrl'	=> array('/p3media/ckeditor/image'),
-			'filebrowserFlashBrowseCreateUrl'	=> array('/p3media/ckeditor/flash'),
-			
+			'filebrowserBrowseCreateUrl' => array('/p3media/ckeditor'),
+			'filebrowserImageBrowseCreateUrl' => array('/p3media/ckeditor/image'),
+			'filebrowserFlashBrowseCreateUrl' => array('/p3media/ckeditor/flash'),
 			'filebrowserUploadCreateUrl' => array('/p3media/import/upload'), // TODO (tbd)
-			
 		),
 	),
 );
