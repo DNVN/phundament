@@ -15,7 +15,6 @@ $mainConfig = array(
 	'preload' => array(
 		'log',
 		'langHandler',
-		#'lessCompiler',
 		'bootstrap',
 		'lessCompiler'),
 	// autoloading model and component classes
@@ -23,7 +22,7 @@ $mainConfig = array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
-		#'ext.gtc.components.*', // gtc
+		'ext.gtc.components.*', // gtc
 		'application.modules.user.components.*', // TODO - Hack: gtc fix for UActiveRecord
 		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
@@ -62,6 +61,22 @@ $mainConfig = array(
 		'p3media' => array(
 			'params' => array(
 				'presets' => array(
+					'360x268' => array(
+						'name' => '360x268',
+						'commands' => array(
+							'resize' => array(360, 268, 2), // Image::AUTO
+							'quality' => 85
+						),
+						'type' => 'jpg'
+					),
+					'160x120' => array(
+						'name' => '160x120',
+						'commands' => array(
+							'resize' => array(160, 120, 2), // Image::AUTO
+							'quality' => 85
+						),
+						'type' => 'jpg'
+					),
 					'span-24' => array(
 						'name' => '1/1 width (span-24), jpg',
 						'commands' => array(

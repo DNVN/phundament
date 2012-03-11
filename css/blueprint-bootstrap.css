@@ -3516,10 +3516,26 @@ table[class*="span-"] {
 div.form .row {
   margin-left: 0px;
 }
+img.pull-left, img.pull-right {
+  padding: 4px;
+}
 .container hr {
   clear: both;
 }
-/*!
+.je-node INPUT {
+  width: 30%;
+}
+/* iPhone Hacks
+@media (max-width: 480px) {
+    .cke_editor iframe {
+	width: 250px !important;
+    }
+    .cke_dialog_body {
+	width: 250px !important;
+	height: 450px !important;
+	overflow: auto;
+    }
+} *//*!
  * Bootstrap Responsive v2.0.1
  *
  * Copyright 2012 Twitter, Inc

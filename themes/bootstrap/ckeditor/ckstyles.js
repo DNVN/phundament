@@ -60,14 +60,28 @@ CKEDITOR.addStylesSet( 'my_styles',
 
     /* Object Styles */
     /* we strongly recommend to use CSS classes only! */
-
+    
     {
-	name : 'Image on Left',
+	name : 'Image Thumbnail',
 	element : 'img',
 	attributes :
 	{
 	    'style' : '',
-	    'class' : 'left',
+	    'class' : 'thumbnail',
+	    'border' : '0',
+	    'vspace' : '0',
+	    'hspace' : '0',
+	    'align' : ''
+	}
+    },
+    
+    {
+	name : 'Image Pull Left',
+	element : 'img',
+	attributes :
+	{
+	    'style' : '',
+	    'class' : 'pull-left',
 	    'border' : '0',
 	    'vspace' : '0',
 	    'hspace' : '0',
@@ -76,12 +90,12 @@ CKEDITOR.addStylesSet( 'my_styles',
     },
 
     {
-	name : 'Image on Right',
+	name : 'Image Pull Right',
 	element : 'img',
 	attributes :
 	{
 	    'style' : '',
-	    'class' : 'right',
+	    'class' : 'pull-right',
 	    'border' : '0',
 	    'vspace' : '0',
 	    'hspace' : '0',
@@ -139,7 +153,7 @@ CKEDITOR.addStylesSet( 'my_styles',
 	}
     },
     {
-	name : '1/6 width, container span3',
+	name : '1/6 width, container span2',
 	element : 'div',
 	attributes : {
 	    'class' : 'span2'

@@ -19,51 +19,68 @@ CKEDITOR.addTemplates( 'default',
     {
 	title: 'Default',
 	image: '',
-	description: 'Heading, paragraph, image, paragraph',
-	html: '<h1>' + loremIpsum.substr(0, 20)+'</h1>' +
+	description: 'Heading, paragraph, thumbnails, subheading, paragraph. Hint: Use a FancyBox Widget for zoomable thumbnails.',
+	html: '<h2>' + loremIpsum.substr(0, 20)+'</h2>' +
 	'<p>'+loremIpsum+'</p>'+
-	'<h3>' +loremIpsum.substr(20, 32)+'</h3>' +
-	'<p><img alt="" height="436" src="/p3media/file/image/?id=0&preset=default" /></p>'+
+	'<ul class="thumbnails"> \
+        <li class="span4"> \
+          <a href="#" class="thumbnail"> \
+            <img src="http://placehold.it/360x268" alt=""> \
+          </a> \
+        </li> \
+        <li class="span2"> \
+          <a href="#" class="thumbnail"> \
+            <img src="http://placehold.it/160x120" alt=""> \
+          </a> \
+        </li> \
+        <li class="span2"> \
+          <a href="#" class="thumbnail"> \
+            <img src="http://placehold.it/160x120" alt=""> \
+          </a> \
+        </li> \
+      </ul>' +
+	'<h3>' +loremIpsum.substr(20, 32)+'</h3>' +	
 	'<p>'+loremIpsum+'</p>'
+
     },
     {
-	title: 'Full width, 50%-50% columns',
+	title: 'Row full width, 50%-50% columns',
 	image: '',
 	description: 'span6 span6',
 	html: '<div class="row"><div class="span6"><p>'+loremIpsum+'</p></div><div class="span6 last"><p>'+loremIpsum+'</p></div></div>'
     },
     {
-	title: 'Full width, 66%-33% columns',
+	title: 'Row full width, 66%-33% columns',
 	image: '',
 	description: 'span8 span4',
 	html: '<div class="row"><div class="span8"><p>'+loremIpsum+'</p></div><div class="span4 last"><p>'+loremIpsum+'</p></div></div>'
     },
     {
-	title: 'Full width, 33%-66% columns',
+	title: 'Row full width, 33%-66% columns',
 	image: '',
 	description: 'span4 span8',
 	html: '<div class="row"><div class="span4"><p>'+loremIpsum+'</p></div><div class="span8 last"><p>'+loremIpsum+'</p></div></div>'
     },
     {
-	title: 'Full width, 33%-33%-33% columns',
+	title: 'Row full width, 33%-33%-33% columns',
 	image: '',
 	description: 'span4 span4 span4',
 	html: '<div class="row"><div class="span4"><p>'+loremIpsum+'</p></div><div class="span4"><p>'+loremIpsum+'</p></div><div class="span4 last"><p>'+loremIpsum+'</p></div></div>'
     },
     {
-	title: 'Full width, 25%-25%-25%-25% columns',
+	title: 'Row full width, 25%-25%-25%-25% columns',
 	image: '',
 	description: 'span3 span3 span3 span3',
 	html: '<div class="row"><div class="span3"><p>'+loremIpsum+'</p></div><div class="span3"><p>'+loremIpsum+'</p></div><div class="span3"><p>'+loremIpsum+'</p></div><div class="span3 last"><p>'+loremIpsum+'</p></div></div>'
     },
     {
-	title: '3/4 width, one column',
+	title: 'Row 3/4 width, one column',
 	image: '',
-	description: 'span-20',
-	html: '<div class="row"><div class="span-20"><p>'+loremIpsum+'</p></div></div>'
+	description: 'span10',
+	html: '<div class="row"><div class="span10"><p>'+loremIpsum+'</p></div></div>'
     },
     {
-	title: '2/3 width, 50%-50% columns',
+	title: 'Row 2/3 width, 50%-50% columns',
 	image: '',
 	description: 'span4 span4',
 	html: '<div class="row"><div class="span4"><p>'+loremIpsum+'</p></div><div class="span4 last"><p>'+loremIpsum+'</p></div></div>'
