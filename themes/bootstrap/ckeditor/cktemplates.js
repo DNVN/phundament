@@ -44,6 +44,16 @@ CKEDITOR.addTemplates( 'default',
 
     },
     {
+	title: 'Default without images',
+	image: '',
+	description: 'Heading, paragraph, thumbnails, subheading, paragraph. Hint: Use a FancyBox Widget for zoomable thumbnails.',
+	html: '<h2>' + loremIpsum.substr(0, 20)+'</h2>' +
+	'<p>'+loremIpsum+'</p>'+	
+	'<h3>' +loremIpsum.substr(20, 32)+'</h3>' +	
+	'<p>'+loremIpsum+loremIpsum+loremIpsum+'</p>'
+
+    },
+    {
 	title: 'Row full width, 50%-50% columns',
 	image: '',
 	description: 'span6 span6',

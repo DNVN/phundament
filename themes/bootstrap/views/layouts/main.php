@@ -60,7 +60,7 @@
 								array('label' => 'English', 'url' => array_merge(array(''), $_GET, array('lang' => 'en'))),
 								array('label' => 'Deutsch', 'url' => array_merge(array(''), $_GET, array('lang' => 'de'))),
 								array('label' => 'Français', 'url' => array_merge(array(''), $_GET, array('lang' => 'fr'))),
-								array('label' => 'Русски', 'url' => array_merge(array(''), $_GET, array('lang' => 'ru'))),
+								array('label' => 'Русский', 'url' => array_merge(array(''), $_GET, array('lang' => 'ru'))),
 							),
 						)
 					)
@@ -70,9 +70,16 @@
 					'htmlOptions' => array('class' => 'pull-right'),
 					'items' => array(
 						array('label' => 'Phundament 3', 'url' => '#', 'visible' => !Yii::app()->user->isGuest, 'items' => array(
-								array('label' => 'Phundament 3.1-dev'),
-								array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')),
+								array('label' => 'Phundament 3-0.3'),
 								array('label' => 'Upload Media', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								'---',
+								#array('label' => 'Pages', 'url' => array('/p3pages'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								array('label' => 'Media', 'url' => array('/p3media'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								array('label' => 'Users', 'url' => array('/user'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								array('label' => 'Rights', 'url' => array('/rights'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								array('label' => 'Widgets', 'url' => array('/p3widgets'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								'---',
+								array('label' => 'Administration', 'url' => array('/p3admin'), 'visible' => Yii::app()->user->checkAccess('Admin')),
 								'---',
 								array('label' => 'Visit Phundament Website', 'url' => 'http://phundament.com', 'visible' => Yii::app()->user->checkAccess('Admin')),
 						)),
@@ -97,10 +104,13 @@
 
 			<script type="text/javascript">
 				// blueprint to bootstrap hotfix
-				$(':not(.subwrapper:has(.row))').addClass('row');
-				$('.subwrapper:has(.form:has(.row))').addClass('row');
-				$(':not(.subwrapper:has([class^=span-]))').removeClass('row');
-				//$('div:first-child[class^=span-]').addClass('first');
+				
+				// IE buggy with this - maybe not needed
+				//$(':not(.subwrapper:has(.row))').addClass('row');
+				//$('.subwrapper:has(.form:has(.row))').addClass('row');
+				//$(':not(.subwrapper:has([class^=span-]))').removeClass('row');
+				
+				//////$('div:first-child[class^=span-]').addClass('first');
 			</script>
 
 
@@ -109,7 +119,7 @@
 			<hr>
 
 			<footer>
-				<p>&copy; Company 2012 | powered by <a href="http://phundament.com">Phundament 3</a></p>
+				<p>&copy; 2012 | powered by <a href="http://phundament.com">Phundament 3</a></p>
 			</footer>
 
 		</div> <!-- /container -->
