@@ -46,6 +46,7 @@ if [ "$choice" == "y" ]; then
     ./yiic migrate --migrationPath=application.modules.p3admin.modules-install.rights.migrations --migrationTable=migration_module_rights --interactive=0
     ./yiic migrate --migrationPath=application.modules.p3widgets.migrations --migrationTable=migration_module_p3widgets --interactive=0
     ./yiic migrate --migrationPath=application.modules.p3media.migrations --migrationTable=migration_module_p3media --interactive=0
+    ./yiic migrate --migrationPath=application.modules.p3pages.migrations --migrationTable=migration_module_p3pages --interactive=0
 else 
 	echo "Skipped."
 fi
