@@ -11,6 +11,9 @@
 [submodule "protected/modules/p3media"]
 	path = protected/modules/p3media
 	url = https://github.com/schmunk42/p3media.git
+[submodule "protected/modules/p3pages"]
+	path = protected/modules/p3pages
+	url = https://github.com/schmunk42/p3pages.git
 
 # Core modules
 [submodule "protected/modules/rights"]
