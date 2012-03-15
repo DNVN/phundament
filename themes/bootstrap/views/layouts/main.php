@@ -38,7 +38,7 @@
 		$models = P3Page::model()->findAll();
 		$p3Items = array();
 		foreach($models AS $model) {
-			$p3Items[] = array('label' => $model->t('menuName'), 'url' => $model->createUrl());
+			$p3Items[] = array('label' => $model->t('menuName',null,true), 'url' => $model->createUrl());
 		}
 		
 		$this->widget('ext.yii-bootstrap.widgets.BootNavbar', array(
