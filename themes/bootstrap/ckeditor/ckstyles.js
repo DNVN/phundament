@@ -62,7 +62,7 @@ CKEDITOR.addStylesSet( 'my_styles',
     /* we strongly recommend to use CSS classes only! */
     
     {
-	name : 'Image Thumbnail',
+	name : 'Link Image Thumbnail',
 	element : 'img',
 	attributes :
 	{
@@ -80,12 +80,7 @@ CKEDITOR.addStylesSet( 'my_styles',
 	element : 'img',
 	attributes :
 	{
-	    'style' : '',
-	    'class' : 'pull-left',
-	    'border' : '0',
-	    'vspace' : '0',
-	    'hspace' : '0',
-	    'align' : ''
+	    'class' : 'pull-left'
 	}
     },
 
@@ -94,12 +89,25 @@ CKEDITOR.addStylesSet( 'my_styles',
 	element : 'img',
 	attributes :
 	{
-	    'style' : '',
-	    'class' : 'pull-right',
-	    'border' : '0',
-	    'vspace' : '0',
-	    'hspace' : '0',
-	    'align' : ''
+	    'class' : 'pull-right'
+	}
+    },
+
+    {
+	name : 'DIV Pull Left',
+	element : 'div',
+	attributes :
+	{
+	    'class' : 'pull-left'
+	}
+    },
+
+    {
+	name : 'DIV Pull Right',
+	element : 'div',
+	attributes :
+	{
+	    'class' : 'pull-right'
 	}
     },
 
@@ -114,14 +122,14 @@ CKEDITOR.addStylesSet( 'my_styles',
 	name : '1/1 width, container span12',
 	element : 'div',
 	attributes : {
-	    'class' : 'span-24'
+	    'class' : 'span12'
 	}
     },
     {
 	name : '3/4 width, container span10',
 	element : 'div',
 	attributes : {
-	    'class' : 'span-18'
+	    'class' : 'span9'
 	}
     },
     {

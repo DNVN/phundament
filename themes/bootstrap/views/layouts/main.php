@@ -33,19 +33,28 @@
 	<body>
 
 		<?php
+		
+		Yii::import('p3pages.modules.*');
+		$models = P3Page::model()->findAll();
+		$p3Items = array();
+		foreach($models AS $model) {
+			$p3Items[] = array('label' => $model->t('menuName'), 'url' => $model->createUrl());
+		}
+		
 		$this->widget('ext.yii-bootstrap.widgets.BootNavbar', array(
 			//'fluid' => true,
 			'collapse' => true,
 			'items' => array(
 				array(
 					'class' => 'bootstrap.widgets.BootMenu',
-					'items' => array(
+					/*'items' => array(
 						array('label' => 'Home', 'url' => array('/site/index')),
 						array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
 						array('label' => 'Contact', 'url' => array('/site/contact')),
 						array('label' => 'Wiki', 'url' => array('/wiki')),
 						array('label' => 'Widget Demo', 'url' => array('/site/page', 'view' => 'widgets')),
-					),
+					),*/
+					'items' => $p3Items
 				),
 //								'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
 
@@ -73,8 +82,8 @@
 								array('label' => 'Phundament 3-0.3'),
 								array('label' => 'Upload Media', 'url' => array('/p3media/import/upload'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
 								'---',
-								#array('label' => 'Pages', 'url' => array('/p3pages'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
 								array('label' => 'Media', 'url' => array('/p3media'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
+								array('label' => 'Pages', 'url' => array('/p3pages'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
 								array('label' => 'Users', 'url' => array('/user'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
 								array('label' => 'Rights', 'url' => array('/rights'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
 								array('label' => 'Widgets', 'url' => array('/p3widgets'), 'visible' => Yii::app()->user->checkAccess('P3media.Import.*')),
@@ -119,7 +128,7 @@
 			<hr>
 
 			<footer>
-				<p>&copy; 2012 | powered by <a href="http://phundament.com">Phundament 3</a></p>
+				<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'footer')) ?>
 			</footer>
 
 		</div> <!-- /container -->
