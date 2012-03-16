@@ -1,4 +1,4 @@
-Phundament 3-0.2
+Phundament 3-0.3
 ================
 
 **beta**
@@ -64,10 +64,23 @@ If you do not have an existing installation
 
 
 ### Setup
+
+
+#### Linux, Unix, Mac OS X
 ```
 phundament/protected/setup-p3.sh "path/to/yiic/command"
 ```  
 *[Setup script source](https://github.com/schmunk42/phundament/blob/master/protected/setup-p3.sh)*
+
+#### Windows
+
+```
+cd \path\to\www
+C:\path\to\yii\framework\yiic.bat webapp .
+cd protected
+setup-p3.bat
+```
+*[Setup script source](https://github.com/schmunk42/phundament/blob/master/protected/setup-p3.bat)*
 
 
 ### Open

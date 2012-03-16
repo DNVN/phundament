@@ -52,20 +52,27 @@ echo You pressed yes!
 :no2
 echo 
 echo STAGE 3
-echo Currently not available under Windows;
-::echo Setup folder permissions? (y/n); 
+SET /P ANSWER=Setup permissions? (y/n)
+echo You chose: %ANSWER%
+if /i {%ANSWER%}=={y} (goto :yes3)
+if /i {%ANSWER%}=={yes} (goto :yes3)
+goto :no3
+
+:yes3
 ::read choice
 ::if [ $choice == y ]; then
-::    mkdir ../runtime
+    mkdir ..\runtime
 ::    chmod 777 ../runtime
-::    mkdir ./data/p3media
+    mkdir data\p3media
 ::    chmod 777 ./data/p3media
-::    mkdir ./data/p3media-import
+    mkdir data\p3media-import
 ::    chmod 777 ./data/p3media-import
 ::else 
 ::	echo Skipped.
 ::fi
 
+
+:no3
 echo 
 echo Installation complete.
 echo Thank you for choosing Phundament 3.
