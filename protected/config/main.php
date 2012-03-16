@@ -221,7 +221,7 @@ $mainConfig = array(
 			'class' => 'ext.yii-less.components.LessCompiler',
 			//'autoCompile' => true,
 			'paths' => array(
-				'protected/extensions/lessii/blueprint/bootstrap.less' => 'css/blueprint-bootstrap.css',
+				'protected/extensions/lessii/blueprint/bootstrap.less' => 'themes/bootstrap/css/blueprint-bootstrap.css',
 			),
 		),
 		'bootstrap' => array(
