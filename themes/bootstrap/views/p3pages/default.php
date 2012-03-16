@@ -1,12 +1,20 @@
-<h1>Index View</h1>
+<?php
+$this->pageTitle = Yii::app()->name . ' - ' . $this->pageTitle;
+$this->breadcrumbs = array(
+	$this->pageTitle,
+);
+?>
+<div class="row">
+	<div class="span12">
+		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'top', 'varyByRequestParam' => P3Page::PAGE_ID_KEY)) ?>
+	</div>
+</div>
 
-<div class="span-24 last">
-	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'top', 'varyByRequestParam' => 'view')) ?>
-</div>
-<div style="height: 10px; clear: both;"></div>
-<div class="span-18">
-	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'left', 'varyByRequestParam' => 'view')) ?>
-</div>
-<div class="span-6 last">
-	<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'right', 'varyByRequestParam' => 'view')) ?>
+<div class="row">
+	<div class="span8">	
+		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'main', 'varyByRequestParam' => P3Page::PAGE_ID_KEY)) ?>
+	</div>
+	<div class="span4">
+		<?php $this->widget('p3widgets.components.P3WidgetContainer', array('id' => 'sidebar', 'varyByRequestParam' => P3Page::PAGE_ID_KEY)) ?>
+	</div>
 </div>
