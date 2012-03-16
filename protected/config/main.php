@@ -8,17 +8,19 @@
 $mainConfig = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'My Phundament 3',
-	'theme' => 'classic',
+	'theme' => 'bootstrap',
 	// preloading 'log' component
 	'preload' => array(
 		'log',
-		'langHandler'),
+		'langHandler',
+		'bootstrap',
+		'lessCompiler'),
 	// autoloading model and component classes
 	'import' => array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
-		#'ext.gtc.components.*', // gtc
+		'ext.gtc.components.*', // gtc
 		'application.modules.user.components.*', // TODO - Hack: gtc fix for UActiveRecord
 		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
 	),
@@ -40,12 +42,14 @@ $mainConfig = array(
 		'p3widgets' => array(
 			'params' => array(
 				'widgets' => array(
-					'zii.widgets.CMenu' => 'Menu Widget',
+					'ext.yii-bootstrap.widgets.BootHero' => 'Bootstrap Hero',
 					'ext.yiiext.widgets.fancybox.EFancyboxWidget' => 'Fancy Box',
 					'ext.yiiext.widgets.cycle.ECycleWidget' => 'Cycle',
-					'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
 					'ext.yiiext.widgets.swfobject.ESwfObjectWidget' => 'SWF Object',
 					'ext.yiiext.widgets.lipsum.ELipsum' => 'Lorem Ipsum Text',
+					// The following widgets work basically, but are hard to handle or can break the app when using incorrect params.
+				#'zii.widgets.CMenu' => 'Menu Widget',
+				#'ext.yiiext.widgets.carousel.ECarouselWidget' => 'Carousel',
 				#'ext.yiiext.widgets.simplemodal.ESimpleModalWidget'=> 'Modal Widget',
 				#'ext.yiiext.widgets.menu.EMenuWidget'				=> 'Extended Menu',
 				#'ext.yiiext.widgets.iconizedMenu.EIconizedMenu'	=> 'Iconized Menu',
@@ -55,6 +59,24 @@ $mainConfig = array(
 		'p3media' => array(
 			'params' => array(
 				'presets' => array(
+					// bootstrap
+					'360x268' => array(
+						'name' => 'Bootstrap 360x268',
+						'commands' => array(
+							'resize' => array(360, 268, 2), // Image::AUTO
+							'quality' => 85
+						),
+						'type' => 'jpg'
+					),
+					'160x120' => array(
+						'name' => 'Bootstrap 160x120',
+						'commands' => array(
+							'resize' => array(160, 120, 2), // Image::AUTO
+							'quality' => 85
+						),
+						'type' => 'jpg'
+					),
+					// blueprint
 					'span-24' => array(
 						'name' => '1/1 width (span-24), jpg',
 						'commands' => array(
@@ -124,6 +146,9 @@ $mainConfig = array(
 			'cssFile' => '/css/rights/default.css'
 		),
 	),
+	/* 'behaviors' => array(
+	  'ext._less.components.LessCompilationBehavior'
+	  ), */
 	// application components
 	'components' => array(
 		'user' => array(
@@ -135,7 +160,7 @@ $mainConfig = array(
 		),
 		'langHandler' => array(
 			'class' => 'ext.p3extensions.components.P3LangHandler',
-			'languages' => array('en', 'de', 'ru', 'ph_debug')
+			'languages' => array('en', 'de', 'ru', 'fr', 'ph_debug')
 		),
 		'urlManager' => array(
 			'class' => 'ext.p3extensions.components.P3LangUrlManager',
@@ -192,12 +217,37 @@ $mainConfig = array(
 			'class' => 'CWidgetFactory',
 			'enableSkin' => true,
 		),
+		'lessCompiler' => array(
+			'class' => 'ext.yii-less.components.LessCompiler',
+			//'autoCompile' => true,
+			'paths' => array(
+				'protected/extensions/lessii/blueprint/bootstrap.less' => 'themes/bootstrap/css/blueprint-bootstrap.css',
+			),
+		),
+		'bootstrap' => array(
+			'class' => 'ext.yii-bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+			'coreCss' => true, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
+			'responsiveCss' => true, // whether to register the Bootstrap responsive CSS (bootstrap-responsive.min.css), default to false
+			'plugins' => array(
+				// Optionally you can configure the "global" plugins (button, popover, tooltip and transition)
+				// To prevent a plugin from being loaded set it to false as demonstrated below
+				'transition' => false, // disable CSS transitions
+				'tooltip' => array(
+					'selector' => 'a.tooltip', // bind the plugin tooltip to anchor tags with the 'tooltip' class
+					'options' => array(
+						'placement' => 'bottom', // place the tooltips below instead
+					),
+				),
+			// If you need help with configuring the plugins, please refer to Bootstrap's own documentation:
+			// http://twitter.github.com/bootstrap/javascript.html
+			),
+		),
 	),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params' => array(
 		// this is used in contact page
-		'adminEmail' => 'webmaster@example.com',
+		'adminEmail' => 'webmaster@example.com',		
 	),
 );
 
@@ -208,11 +258,12 @@ $config = new P3Configuration(array(
 		dirname(__FILE__) . '/../modules/p3admin/config/main.php',
 		dirname(__FILE__) . '/../modules/p3widgets/config/main.php',
 		dirname(__FILE__) . '/../modules/p3media/config/main.php',
-		#dirname(__FILE__) . '/../modules/p3pages/config/main.php',
+		dirname(__FILE__) . '/../modules/p3pages/config/main.php',
 		dirname(__FILE__) . '/../modules/p3admin/modules-install/user/config/main.php',
 		dirname(__FILE__) . '/../modules/p3admin/modules-install/rights/config/main.php',
 		#dirname(__FILE__) . '/../modules/p3admin/modules-install/webshell/config/main.php',
-		dirname(__FILE__) . '/../extensions/p3extensions/widgets/ckeditor/config/main.php',
+		#dirname(__FILE__) . '/../extensions/p3extensions/widgets/ckeditor/config/main.php', // ==> bootstrap-theme
+		dirname(__FILE__) . '/../../themes/bootstrap/config/main.php',
 		$mainConfig,
 		dirname(__FILE__) . '/local.php',
 	));
