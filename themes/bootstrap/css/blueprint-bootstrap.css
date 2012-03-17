@@ -4187,3 +4187,12 @@ img.pull-left, img.pull-right {
     margin-left: 0px;
   }
 }
+.ckeditor LI {
+  height: 180px;
+}
+#p3-media-grid IMG.ckeditor {
+  height: auto;
+  width: 150px;
+  max-width: 150px;
+  max-height: 120px;
+}
