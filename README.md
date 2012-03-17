@@ -1,6 +1,8 @@
 Phundament 3-0.3
 ================
 
+## github [>Download](https://github.com/schmunk42/phundament/downloads "Downloads") [>Fork](https://github.com/schmunk42/phundament "Fork")
+
 #### 0.3.1 (pending)
 
 [FIX] P3 controller permissions
