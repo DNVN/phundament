@@ -1,6 +1,22 @@
 Phundament 3-0.3
 ================
 
+#### 0.3.1 (pending)
+
+[FIX] P3 controller permissions
+[UPD] updated demo content
+[ENH] added Windows installer
+[ENH] code cleanup
+
+#### 0.3 (12.3.2012)
+Bootstrapped it! Complete responsive design, completely editable with mobile devices. Added widget translation, updated migrations, templates. A whole bunch of other stuff (fixes, fixes, fixes).
+
+#### 0.2: 
+Installation fixes for Linux MySQL, widget order fix, added automatic-property detection, updated image urls ... Check it out!
+
+#### 0.1:
+Initial release
+
 **beta**
 
 Phundament 3 is an application foundation built upon a set if independent Yii modules and extensions such as [user](http://www.yiiframework.com/extension/yii-user/), [rights](http://www.yiiframework.com/extension/rights/), [yiiext](http://code.google.com/p/yiiext/), [gtc](https://github.com/schmunk42/gii-template-collection), ckeditor, jquery-file-upload, p3widgets and p3media.
