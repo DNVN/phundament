@@ -64,17 +64,22 @@ $mainConfig = array(
 						'name' => 'Bootstrap 360x268',
 						'commands' => array(
 							'resize' => array(360, 268, 2), // Image::AUTO
-							'quality' => 85
 						),
-						'type' => 'jpg'
+						'type' => 'png'
+					),
+					'280x180' => array(
+						'name' => 'Bootstrap 160x120',
+						'commands' => array(
+							'resize' => array(280, 180, 2), // Image::AUTO
+						),
+						'type' => 'png'
 					),
 					'160x120' => array(
 						'name' => 'Bootstrap 160x120',
 						'commands' => array(
 							'resize' => array(160, 120, 2), // Image::AUTO
-							'quality' => 85
 						),
-						'type' => 'jpg'
+						'type' => 'png'
 					),
 					// blueprint
 					'span-24' => array(

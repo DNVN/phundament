@@ -35,7 +35,11 @@
 		<?php
 		
 		Yii::import('p3pages.modules.*');
+		
 		$models = P3Page::model()->findAll();
+		$rootNode = P3Page::model()->findByPk(1);
+		$models = $rootNode->getChildren();
+		
 		$p3Items = array();
 		foreach($models AS $model) {
 			$p3Items[] = array('label' => $model->t('menuName',null,true), 'url' => $model->createUrl());
