@@ -242,7 +242,7 @@ $p3Config = array(
 		),
 		'lessCompiler' => array(
 			'class' => 'ext.yii-less.components.LessCompiler',
-			'autoCompile' => true,
+			//'autoCompile' => true,
 			'paths' => array(
 				'protected/extensions/lessii/translations/blueprint-bootstrap.less' => 'protected/extensions/_themes/bootstrap/css/blueprint-bootstrap.css',
 			),

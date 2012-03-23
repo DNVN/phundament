@@ -20,7 +20,8 @@
 		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<link href="<?php echo Yii::app()->theme->baseUrl ?>/css/blueprint-bootstrap.css" rel="stylesheet">
+		<?php Yii::app()->assetManager->publish(Yii::app()->theme->basePath.DIRECTORY_SEPARATOR.'css') ?>
+		<link href="<?php echo Yii::app()->assetManager->publish(Yii::app()->theme->basePath.DIRECTORY_SEPARATOR.'css'.DIRECTORY_SEPARATOR.'blueprint-bootstrap.css') ?>" rel="stylesheet">
 
 		<!-- Le fav and touch icons -->
 		<link rel="shortcut icon" href="images/favicon.ico">
