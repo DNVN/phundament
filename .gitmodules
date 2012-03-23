@@ -1,41 +1,41 @@
 # Phundament 3
-[submodule "protected/extensions/p3extensions"]
-	path = protected/extensions/p3extensions
+[submodule "protected/extensions/phundament/p3extensions"]
+	path = protected/extensions/phundament/p3extensions
 	url = https://github.com/schmunk42/p3extensions.git
-[submodule "protected/extensions/p3admin"]
-	path = protected/extensions/p3admin
+[submodule "protected/extensions/phundament/p3admin"]
+	path = protected/extensions/phundament/p3admin
 	url = https://github.com/schmunk42/p3admin.git
-[submodule "protected/extensions/p3widgets"]
-	path = protected/extensions/p3widgets
+[submodule "protected/extensions/phundament/p3widgets"]
+	path = protected/extensions/phundament/p3widgets
 	url = https://github.com/schmunk42/p3widgets.git
-[submodule "protected/extensions/p3media"]
-	path = protected/extensions/p3media
+[submodule "protected/extensions/phundament/p3media"]
+	path = protected/extensions/phundament/p3media
 	url = https://github.com/schmunk42/p3media.git
-[submodule "protected/extensions/p3pages"]
-	path = protected/extensions/p3pages
+[submodule "protected/extensions/phundament/p3pages"]
+	path = protected/extensions/phundament/p3pages
 	url = https://github.com/schmunk42/p3pages.git
 
 # Core modules
 [submodule "protected/extensions/rights"]
 	path = protected/extensions/rights
 	url = https://github.com/schmunk42/yii-rights.git
-[submodule "protected/extensions/user"]
-	path = protected/extensions/user
+[submodule "protected/extensions/mishamx/yii-user/user"]
+	path = protected/extensions/mishamx/yii-user/user
 	url = https://github.com/schmunk42/yii-user.git
 
 # Extensions
-[submodule "protected/extensions/gtc"]
-	path = protected/extensions/gtc
+[submodule "protected/extensions/phundament/gtc"]
+	path = protected/extensions/phundament/gtc
 	url = https://github.com/schmunk42/gii-template-collection.git
 [submodule "protected/extensions/yiiext"]
 	path = protected/extensions/yiiext
 	url = https://github.com/schmunk42/yiiext.git
-[submodule "protected/extensions/yii-bootstrap"]
-	path = protected/extensions/yii-bootstrap
+[submodule "protected/extensions/crisu83/yii-bootstrap"]
+	path = protected/extensions/crisu83/yii-bootstrap
 	url = https://schmunk42@github.com/schmunk42/yii-bootstrap.git
-[submodule "protected/extensions/yii-less"]
-	path = protected/extensions/yii-less
+[submodule "protected/extensions/crisu83/yii-less"]
+	path = protected/extensions/crisu83/yii-less
 	url = https://schmunk42@github.com/schmunk42/yii-less.git
-[submodule "protected/extensions/lessii"]
-	path = protected/extensions/lessii
+[submodule "protected/extensions/phundament/lessii"]
+	path = protected/extensions/phundament/lessii
 	url = https://github.com/schmunk42/lessii.git
