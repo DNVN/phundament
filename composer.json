@@ -91,9 +91,11 @@
     "require": {
         "php": ">=5.3.0",
         "phundament/p3install": "master",
+        "phundament/p3extensions": "master",
         "phundament/p3admin": "master",
         "phundament/p3widgets": "master",
         "phundament/p3pages": "master",
+        "phundament/p3media": "master",
         "phundament/gii-template-collection": "master",
         "phundament/lessii": "master",
         "phundament/themes/p3bootstrap": "master",
