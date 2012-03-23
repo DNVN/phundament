@@ -18,6 +18,12 @@
     "repositories": [
             {
                 "type":"vcs",
+                "url": "git://github.com/schmunk42/p3install.git"
+            },{            
+                "type":"vcs",
+                "url": "git://github.com/schmunk42/p3extensions.git"
+            },{
+                "type":"vcs",
                 "url": "git://github.com/schmunk42/p3admin.git"
             },{
                 "type":"vcs",
@@ -30,18 +36,70 @@
                 "url": "git://github.com/schmunk42/p3pages.git"
             },{
                 "type":"vcs",
-                "url": "git://github.com/schmunk42/p3extensions.git"
+                "url": "git://github.com/schmunk42/p3bootstrap.git"
             },{
                 "type":"vcs",
-                "url": "git://github.com/schmunk42/yii-user.git"
+                "url": "git://github.com/schmunk42/gii-template-collection.git"
             },{
                 "type":"vcs",
-                "url": "git://github.com/schmunk42/yii-rights.git"
+                "url": "git://github.com/schmunk42/lessii.git"
+            },{            
+            "type": "package",
+            "package": {
+                "name": "crisu83/yii-less",
+                "version": "master",
+                "source": {
+                    "url": "https://bitbucket.org/Crisu83/yii-less",
+                    "type": "hg",
+                    "reference": "tip"
+                }
+                }
+            },{
+                "type": "package",
+                "package": {
+                    "name": "crisu83/yii-bootstrap",
+                    "version": "master",
+                    "source": {
+                        "url": "https://bitbucket.org/Crisu83/yii-bootstrap",
+                        "type": "hg",
+                        "reference": "tip"
+                    }
+                }
+            },{
+                "type": "package",
+                "package": {
+                    "name": "crisu83/yii-rights",
+                    "version": "master",
+                    "source": {
+                        "url": "https://bitbucket.org/Crisu83/yii-rights",
+                        "type": "hg",
+                        "reference": "tip"
+                    }
+                }
+            },{ 
+            "type": "package",
+            "package": {
+                "name": "mishamx/yii-user",
+                "version": "0.3.107",
+                "dist": {
+                    "url": "http://www.yiiframework.com/extension/yii-user/files/yii-user-0.3-r107.zip",
+                    "type": "zip"
+                }
             }
+        }
     ],
     "require": {
         "php": ">=5.3.0",
+        "phundament/p3install": "master",
         "phundament/p3admin": "master",
-        "phundament/p3widgets": "master"
+        "phundament/p3widgets": "master",
+        "phundament/p3pages": "master",
+        "phundament/gii-template-collection": "master",
+        "phundament/lessii": "master",
+        "phundament/themes/p3bootstrap": "master",
+        "crisu83/yii-less": "master",
+        "crisu83/yii-bootstrap": "master",
+        "crisu83/yii-rights": "master",        
+        "mishamx/yii-user": "0.3.107"        
     }
 }
