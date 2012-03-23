@@ -2,25 +2,25 @@
 [submodule "protected/extensions/p3extensions"]
 	path = protected/extensions/p3extensions
 	url = https://github.com/schmunk42/p3extensions.git
-[submodule "protected/modules/p3admin"]
-	path = protected/modules/p3admin
+[submodule "protected/extensions/p3admin"]
+	path = protected/extensions/p3admin
 	url = https://github.com/schmunk42/p3admin.git
-[submodule "protected/modules/p3widgets"]
-	path = protected/modules/p3widgets
+[submodule "protected/extensions/p3widgets"]
+	path = protected/extensions/p3widgets
 	url = https://github.com/schmunk42/p3widgets.git
-[submodule "protected/modules/p3media"]
-	path = protected/modules/p3media
+[submodule "protected/extensions/p3media"]
+	path = protected/extensions/p3media
 	url = https://github.com/schmunk42/p3media.git
-[submodule "protected/modules/p3pages"]
-	path = protected/modules/p3pages
+[submodule "protected/extensions/p3pages"]
+	path = protected/extensions/p3pages
 	url = https://github.com/schmunk42/p3pages.git
 
 # Core modules
-[submodule "protected/modules/rights"]
-	path = protected/modules/rights
+[submodule "protected/extensions/rights"]
+	path = protected/extensions/rights
 	url = https://github.com/schmunk42/yii-rights.git
-[submodule "protected/modules/user"]
-	path = protected/modules/user
+[submodule "protected/extensions/user"]
+	path = protected/extensions/user
 	url = https://github.com/schmunk42/yii-user.git
 
 # Extensions
