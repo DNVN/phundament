@@ -1,4 +1,4 @@
-/* We need to import these files *//*!
+/* We need to import these files, so not include them elsewhere, eg. yii-bootstrap oder layouts/main.php *//*!
  * Bootstrap v2.0.1
  *
  * Copyright 2012 Twitter, Inc

@@ -36,3 +36,6 @@
 [submodule "protected/extensions/yii-less"]
 	path = protected/extensions/yii-less
 	url = https://schmunk42@github.com/schmunk42/yii-less.git
+[submodule "protected/extensions/lessii"]
+	path = protected/extensions/lessii
+	url = https://github.com/schmunk42/lessii.git
