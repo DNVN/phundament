@@ -13,7 +13,7 @@
 	url = https://github.com/schmunk42/p3media.git
 [submodule "protected/extensions/phundament/p3pages"]
 	path = protected/extensions/phundament/p3pages
-	url = https://schmunk42@github.com/schmunk42/p3pages.git
+	url = https://github.com/schmunk42/p3pages.git
 
 # Core modules
 [submodule "protected/extensions/mishamx/yii-user/user"]
@@ -21,18 +21,15 @@
 	url = https://github.com/schmunk42/yii-user.git
 
 # Extensions
-[submodule "protected/extensions/phundament/gtc"]
-	path = protected/extensions/phundament/gtc
-	url = https://github.com/schmunk42/gii-template-collection.git
 [submodule "protected/extensions/yiiext"]
 	path = protected/extensions/yiiext
 	url = https://github.com/schmunk42/yiiext.git
 [submodule "protected/extensions/crisu83/yii-bootstrap"]
 	path = protected/extensions/crisu83/yii-bootstrap
-	url = https://schmunk42@github.com/schmunk42/yii-bootstrap.git
+	url = https://github.com/schmunk42/yii-bootstrap.git
 [submodule "protected/extensions/crisu83/yii-less"]
 	path = protected/extensions/crisu83/yii-less
-	url = https://schmunk42@github.com/schmunk42/yii-less.git
+	url = https://github.com/schmunk42/yii-less.git
 [submodule "protected/extensions/phundament/lessii"]
 	path = protected/extensions/phundament/lessii
 	url = https://github.com/schmunk42/lessii.git
