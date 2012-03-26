@@ -26,6 +26,7 @@ $p3Config = array(
 		
 		'ext.crisu83.yii-rights.components.*', // TODO - Hack: needed, so rights can reside in extensions
 		'ext.phundament.p3extensions.widgets.userflash.EUserFlash', // flash messages		
+		'ext.phundament.gtc.components.*', // TODO: Hack, because of modules in extensions???
 		'ext.phundament.p3widgets.components.*', // TODO: Hack, because of modules in extensions???
 		'ext.phundament.p3pages.models.*', // TODO: Hack, because of modules in extensions???
 		'ext.mishamx.yii-user.models.*', // TODO: Hack, because of modules in extensions???
