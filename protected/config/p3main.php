@@ -246,7 +246,7 @@ $p3Config = array(
 			'class' => 'ext.crisu83.yii-less.components.LessCompiler',
 			//'autoCompile' => true,
 			'paths' => array(
-				'protected/extensions/lessii/translations/blueprint-bootstrap.less' => 'protected/extensions/phundament/themes/p3bootstrap/css/blueprint-bootstrap.css',
+				'protected/extensions/phundament/lessii/translations/blueprint-bootstrap.less' => 'protected/extensions/phundament/themes/p3bootstrap/css/blueprint-bootstrap.css',
 			),
 		),
 		'bootstrap' => array(
