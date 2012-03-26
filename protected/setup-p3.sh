@@ -42,11 +42,11 @@ echo "Apply database migrations? (y/n)";
 read choice
 if [ "$choice" == "y" ]; then
 	echo "Applying migrations...";
-    ./yiic migrate --migrationPath=ext.p3admin.modules-install.user.migrations --migrationTable=migration_module_user --interactive=0
-    ./yiic migrate --migrationPath=ext.p3admin.modules-install.rights.migrations --migrationTable=migration_module_rights --interactive=0
-    ./yiic migrate --migrationPath=ext.p3widgets.migrations --migrationTable=migration_module_p3widgets --interactive=0
-    ./yiic migrate --migrationPath=ext.p3media.migrations --migrationTable=migration_module_p3media --interactive=0
-    ./yiic migrate --migrationPath=ext.p3pages.migrations --migrationTable=migration_module_p3pages --interactive=0
+    ./yiic migrate --migrationPath=ext.phundament.p3admin.modules-install.user.migrations --migrationTable=migration_module_user --interactive=0
+    ./yiic migrate --migrationPath=ext.phundament.p3admin.modules-install.rights.migrations --migrationTable=migration_module_rights --interactive=0
+    ./yiic migrate --migrationPath=ext.phundament.p3widgets.migrations --migrationTable=migration_module_p3widgets --interactive=0
+    ./yiic migrate --migrationPath=ext.phundament.p3media.migrations --migrationTable=migration_module_p3media --interactive=0
+    ./yiic migrate --migrationPath=ext.phundament.p3pages.migrations --migrationTable=migration_module_p3pages --interactive=0
 else 
 	echo "Skipped."
 fi

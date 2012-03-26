@@ -13,7 +13,7 @@
 	url = https://github.com/schmunk42/p3media.git
 [submodule "protected/extensions/phundament/p3pages"]
 	path = protected/extensions/phundament/p3pages
-	url = https://github.com/schmunk42/p3pages.git
+	url = https://schmunk42@github.com/schmunk42/p3pages.git
 
 # Core modules
 [submodule "protected/extensions/mishamx/yii-user/user"]

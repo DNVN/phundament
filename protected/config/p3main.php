@@ -5,10 +5,12 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
+$applicationDirectory = realpath(dirname(__FILE__). DIRECTORY_SEPARATOR . '..' .  DIRECTORY_SEPARATOR );
+
 $p3Config = array(
-	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
+	'basePath' => $applicationDirectory,
 	'name' => 'My Phundament 3',
-	'theme' => 'bootstrap',
+	'theme' => 'p3bootstrap',
 	// preloading 'log' component
 	'preload' => array(
 		'log',
@@ -20,23 +22,23 @@ $p3Config = array(
 		'application.models.*',
 		'application.components.*',
 		'zii.widgets.*',
-		'ext.gtc.components.*', // gtc
+		'ext.phundament.gii-template-collection.components.*', // gtc
 		
-		'ext.rights.components.*', // TODO - Hack: needed, so rights can reside in extensions
-		'ext.user.components.*', // TODO - Hack: gtc fix for UActiveRecord
-		'ext.p3extensions.widgets.userflash.EUserFlash', // flash messages
+		'ext.crisu83.yii-rights.components.*', // TODO - Hack: needed, so rights can reside in extensions
+		'ext.phundament.p3extensions.widgets.userflash.EUserFlash', // flash messages		
+		'ext.phundament.p3widgets.components.*', // TODO: Hack, because of modules in extensions???
+		'ext.phundament.p3pages.models.*', // TODO: Hack, because of modules in extensions???
+		'ext.mishamx.yii-user.models.*', // TODO: Hack, because of modules in extensions???
+		'ext.mishamx.yii-user.components.*', // TODO - Hack: gtc fix for UActiveRecord
 		
-		'ext.p3widgets.components.*', // TODO: Hack, because of modules in extensions???
-		'ext.p3pages.models.*', // TODO: Hack, because of modules in extensions???
-		'ext.user.models.*', // TODO: Hack, because of modules in extensions???
 	),
 	'aliases' => array(
 		// TODO: Hack, because of modules in extensions
-		'p3widgets' => 'ext.p3widgets',
-		'p3media' => 'ext.p3media',
-		'p3pages' => 'ext.p3pages',
-		'user' => 'ext.user',
-		'rights' => 'ext.rights',
+		'p3widgets' => 'ext.phundament.p3widgets',
+		'p3media' => 'ext.phundament.p3media',
+		'p3pages' => 'ext.phundament.p3pages',
+		'user' => 'ext.mishamx.yii-user',
+		'rights' => 'ext.crisu83.yii-rights',
 	),
 	'modules' => array(
 		// uncomment the following to enable the Gii tool
@@ -171,7 +173,7 @@ $p3Config = array(
 	// application components
 	'components' => array(
 		'themeManager' => array(
-			'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'_themes',
+			'basePath' => $applicationDirectory.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'phundament'.DIRECTORY_SEPARATOR.'themes',
 			// 'baseUrl' => DO NOT USE, themes are in extension. Publish assets with the assetManager instead.
 		),
 		'user' => array(
@@ -179,14 +181,14 @@ $p3Config = array(
 			'allowAutoLogin' => true,
 		),
 		'returnUrl' => array(
-			'class' => 'ext.p3extensions.components.P3ReturnUrl',
+			'class' => 'ext.phundament.p3extensions.components.P3ReturnUrl',
 		),
 		'langHandler' => array(
-			'class' => 'ext.p3extensions.components.P3LangHandler',
+			'class' => 'ext.phundament.p3extensions.components.P3LangHandler',
 			'languages' => array('en', 'de', 'ru', 'fr', 'ph_debug')
 		),
 		'urlManager' => array(
-			'class' => 'ext.p3extensions.components.P3LangUrlManager',
+			'class' => 'ext.phundament.p3extensions.components.P3LangUrlManager',
 			'showScriptName' => false,
 			'appendParams' => false, // in general more error resistant
 			'urlFormat' => 'get',
@@ -209,7 +211,7 @@ $p3Config = array(
 		),
 		'db' => array(
 			// SQLite
-			'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
+			'connectionString' => 'sqlite:' . $applicationDirectory . '/data/testdrive.db',
 		// MySQL
 		#'connectionString' => 'mysql:host=localhost;dbname=p3',
 		#'emulatePrepare' => true,
@@ -241,14 +243,14 @@ $p3Config = array(
 			'enableSkin' => true,
 		),
 		'lessCompiler' => array(
-			'class' => 'ext.yii-less.components.LessCompiler',
+			'class' => 'ext.crisu83.yii-less.components.LessCompiler',
 			//'autoCompile' => true,
 			'paths' => array(
-				'protected/extensions/lessii/translations/blueprint-bootstrap.less' => 'protected/extensions/_themes/bootstrap/css/blueprint-bootstrap.css',
+				'protected/extensions/lessii/translations/blueprint-bootstrap.less' => 'protected/extensions/phundament/themes/p3bootstrap/css/blueprint-bootstrap.css',
 			),
 		),
 		'bootstrap' => array(
-			'class' => 'ext.yii-bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+			'class' => 'ext.crisu83.yii-bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
 			'coreCss' => false, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
 			'responsiveCss' => false, // whether to register the Bootstrap responsive CSS (bootstrap-responsive.min.css), default to false
 			'plugins' => array(
@@ -276,20 +278,20 @@ $p3Config = array(
 
 
 // include external configs
-require_once(dirname(__FILE__) . '/../extensions/p3extensions/components/P3Configuration.php');
+require_once($applicationDirectory.'/extensions/phundament/p3extensions/components/P3Configuration.php');
 $config = new P3Configuration(array(
-		dirname(__FILE__) . '/main.php',
-		dirname(__FILE__) . '/../extensions/p3admin/config/main.php',
-		dirname(__FILE__) . '/../extensions/p3widgets/config/main.php',
-		dirname(__FILE__) . '/../extensions/p3media/config/main.php',
-		dirname(__FILE__) . '/../extensions/p3pages/config/main.php',
-		dirname(__FILE__) . '/../extensions/p3admin/modules-install/user/config/main.php',
-		dirname(__FILE__) . '/../extensions/p3admin/modules-install/rights/config/main.php',
+		$applicationDirectory . '/config/main.php',
+		$applicationDirectory . '/extensions/phundament/p3admin/config/main.php',
+		$applicationDirectory . '/extensions/phundament/p3widgets/config/main.php',
+		$applicationDirectory . '/extensions/phundament/p3media/config/main.php',
+		$applicationDirectory . '/extensions/phundament/p3pages/config/main.php',
+		$applicationDirectory . '/extensions/phundament/p3admin/modules-install/user/config/main.php',
+		$applicationDirectory . '/extensions/phundament/p3admin/modules-install/rights/config/main.php',
 		#dirname(__FILE__) . '/../extensions/p3admin/modules-install/webshell/config/main.php',
 		#dirname(__FILE__) . '/../extensions/p3extensions/widgets/ckeditor/config/main.php', // ==> bootstrap-theme
-		dirname(__FILE__) . '/../extensions/_themes/bootstrap/config/main.php',
+		$applicationDirectory . '/extensions/phundament/themes/p3bootstrap/config/main.php',
 		$p3Config,
-		dirname(__FILE__) . '/local.php',
+		$applicationDirectory . '/config/local.php',
 	));
 
 return $config->toArray();

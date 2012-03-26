@@ -42,11 +42,11 @@ goto :no2
 :yes2
 echo You pressed yes!
 	echo Applying migrations...;
-    call yiic.bat migrate --migrationPath=application.modules.p3admin.modules-install.user.migrations --migrationTable=migration_module_user --interactive=0
-    call yiic.bat migrate --migrationPath=application.modules.p3admin.modules-install.rights.migrations --migrationTable=migration_module_rights --interactive=0
-    call yiic.bat migrate --migrationPath=application.modules.p3widgets.migrations --migrationTable=migration_module_p3widgets --interactive=0
-    call yiic.bat migrate --migrationPath=application.modules.p3media.migrations --migrationTable=migration_module_p3media --interactive=0
-    call yiic.bat migrate --migrationPath=application.modules.p3pages.migrations --migrationTable=migration_module_p3pages --interactive=0
+    call yiic.bat migrate --migrationPath=ext.phundament.p3admin.modules-install.user.migrations --migrationTable=migration_module_user --interactive=0
+    call yiic.bat migrate --migrationPath=ext.phundament.p3admin.modules-install.rights.migrations --migrationTable=migration_module_rights --interactive=0
+    call yiic.bat migrate --migrationPath=ext.phundament.p3widgets.migrations --migrationTable=migration_module_p3widgets --interactive=0
+    call yiic.bat migrate --migrationPath=ext.phundament.p3media.migrations --migrationTable=migration_module_p3media --interactive=0
+    call yiic.bat migrate --migrationPath=ext.phundament.p3pages.migrations --migrationTable=migration_module_p3pages --interactive=0
 
 
 :no2
