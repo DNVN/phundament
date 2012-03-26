@@ -16,9 +16,6 @@
 	url = https://github.com/schmunk42/p3pages.git
 
 # Core modules
-[submodule "protected/extensions/rights"]
-	path = protected/extensions/rights
-	url = https://github.com/schmunk42/yii-rights.git
 [submodule "protected/extensions/mishamx/yii-user/user"]
 	path = protected/extensions/mishamx/yii-user/user
 	url = https://github.com/schmunk42/yii-user.git
@@ -48,3 +45,6 @@
 [submodule "protected/extensions/phundament/themes/p3bootstrap"]
 	path = protected/extensions/phundament/themes/p3bootstrap
 	url = https://github.com/schmunk42/p3bootstrap.git
+[submodule "protected/extensions/crisu83/yii-rights"]
+	path = protected/extensions/crisu83/yii-rights
+	url = https://github.com/schmunk42/yii-rights.git
