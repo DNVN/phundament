@@ -45,3 +45,6 @@
 [submodule "protected/extensions/crisu83/yii-rights"]
 	path = protected/extensions/crisu83/yii-rights
 	url = https://github.com/schmunk42/yii-rights.git
+[submodule "protected/extensions/phundament/gtc"]
+	path = protected/extensions/phundament/gtc
+	url = https://github.com/schmunk42/gii-template-collection.git
