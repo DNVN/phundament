@@ -245,9 +245,9 @@ $p3Config = array(
 		),
 		'lessCompiler' => array(
 			'class' => 'ext.crisu83.yii-less.components.LessCompiler',
-			//'autoCompile' => true,
+			//'autoCompile' => true, // You may need to set xdebug.max_nesting_level = 1024
 			'paths' => array(
-				'protected/extensions/phundament/lessii/translations/blueprint-bootstrap.less' => 'protected/extensions/phundament/themes/p3bootstrap/css/blueprint-bootstrap.css',
+				'protected/extensions/phundament/themes/p3bootstrap/less/p3.less' => 'protected/extensions/phundament/themes/p3bootstrap/css/p3.css',
 			),
 		),
 		'bootstrap' => array(
