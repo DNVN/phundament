@@ -100,6 +100,13 @@ setup-p3.bat
 ```
 *[Setup script source](https://github.com/schmunk42/phundament/blob/master/protected/setup-p3.bat)*
 
+### Update config
+
+Edit the just generated ```index.php``` file and include the p3.php config file
+```
+$config=dirname(__FILE__).'/protected/config/p3.php';
+```
+
 
 ### Open
 http://localhost/phundament
