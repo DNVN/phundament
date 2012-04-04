@@ -50,7 +50,7 @@ return array(
 			),
 		),
 		'image' => array(
-			'class' => 'ext.p3extensions.components.image.CImageComponent',
+			'class' => 'ext.phundament.p3extensions.components.image.CImageComponent',
 			// GD or ImageMagick
 			'driver' => 'ImageMagick',
 			'params' => array('directory' => '/opt/local/bin'),

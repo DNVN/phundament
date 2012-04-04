@@ -48,3 +48,9 @@
 [submodule "protected/extensions/phundament/gtc"]
 	path = protected/extensions/phundament/gtc
 	url = https://github.com/schmunk42/gii-template-collection.git
+[submodule "protected/extensions/phundament/jquery-file-upload"]
+	path = protected/extensions/phundament/jquery-file-upload
+	url = https://github.com/schmunk42/jQuery-File-Upload.git
+[submodule "protected/extensions/twitter/bootstrap"]
+	path = protected/extensions/twitter/bootstrap
+	url = https://github.com/twitter/bootstrap.git
