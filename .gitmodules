@@ -36,9 +36,6 @@
 [submodule "protected/extensions/phundament/p3widgtes"]
 	path = protected/extensions/phundament/p3widgtes
 	url = https://github.com/schmunk42/p3widgets.git
-[submodule "protected/extensions/phundament/p3install"]
-	path = protected/extensions/phundament/p3install
-	url = https://github.com/schmunk42/p3install.git
 [submodule "protected/extensions/phundament/themes/p3bootstrap"]
 	path = protected/extensions/phundament/themes/p3bootstrap
 	url = https://github.com/schmunk42/p3bootstrap.git
