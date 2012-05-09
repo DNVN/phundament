@@ -4,6 +4,8 @@ IMPORTANT NOTICE
 Please start watching (and forking) this repo: https://github.com/phundament/app
 This is the installation via composer, other installation types are not actively maintained!
 
+Note: All Yii extensions and modules are github or bitbucket repositories.
+
 
 
 Phundament 3-0.3
