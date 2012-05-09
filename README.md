@@ -1,3 +1,11 @@
+IMPORTANT NOTICE
+================
+
+Please start watching (and forking) this repo: https://github.com/phundament/app
+This is the installation via composer, other installation types are not actively maintained!
+
+
+
 Phundament 3-0.3
 ================
 
